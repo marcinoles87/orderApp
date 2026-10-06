@@ -2,12 +2,24 @@
 
 function App() {
 
+  const handleUploadFile = () =>{
+    
+    const file = document.getElementById('fileUpload')
+    const output = document.getElementById('output')
+
+
+
+
+  }
+
   return (
     <div className='app-container'>
       <h1>Platforma do tworzenia zamówień</h1>
 
         <div>
           <p>Dodaj najnowsze stany magazynu</p>
+          <input type="file"  id="fileUpload"/>
+          <button onClick={handleUploadFile}>Upload File</button>
         </div>
 
         <div>
@@ -16,6 +28,11 @@ function App() {
 
         <div>
           <p>Login User</p>
+        </div>
+
+        <div>
+          <p>Stany</p>
+          <p id="output"></p>
         </div>
 
      
