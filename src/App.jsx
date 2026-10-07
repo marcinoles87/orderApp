@@ -1,29 +1,29 @@
+import { useState } from "react"
 
 
 function App() {
 
+  const [text,setText] = useState('')
+ 
   const handleUploadFile = (e) =>{
 
     console.log(e)
     e.preventDefault()
 
     const file = e.target.files[0]
-    console.log(file)
-
-     let fr = new FileReader()
+    const fr = new FileReader()
 
      fr.readAsText(file)
 
      fr.onload = () =>{
 
       const content = document.getElementById('output')
-
-
-      content.textContent = fr.result
+      setText(fr.result)
      }
     
 
 
+     console.log(text)
   
 
   }
@@ -34,7 +34,7 @@ function App() {
 
         <div>
           <p>Dodaj najnowsze stany magazynu</p>
-          <input type="file"  id="fileUpload" onChange={handleUploadFile}/>
+          <input type="file"  id="fileUpload" onChange={ (e) => handleUploadFile(e)}/>
         </div>
 
         <div>
@@ -47,7 +47,7 @@ function App() {
 
         <div>
           <p>Stany</p>
-          <p id="output"></p>
+          <p id="output">{text}</p>
         </div>
 
      
