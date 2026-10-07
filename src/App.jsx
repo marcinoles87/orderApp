@@ -18,7 +18,6 @@ function App() {
 
       const content = document.getElementById('output')
 
-      console.log(fr.result)
 
       content.textContent = fr.result
      }
