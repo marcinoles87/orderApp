@@ -7,7 +7,23 @@ function App() {
     const file = document.getElementById('fileUpload')
     const output = document.getElementById('output')
 
+    file.addEventListener('change', () =>{
 
+         let fr = new FileReader()
+
+         fr.onload = function () {
+
+          output.textContent = fr.result
+
+
+         }
+
+
+    })
+
+
+
+   
 
 
   }
