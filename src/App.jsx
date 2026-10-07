@@ -2,24 +2,38 @@
 
 function App() {
 
-  const handleUploadFile = () =>{
+  const handleUploadFile = (e) =>{
+
+    console.log(e)
+    e.preventDefault()
+
+    const file = e.target.files[0]
+    console.log(file)
+
+     let fr = new FileReader()
+
+     fr.readAsText(file)
     
-    const file = document.getElementById('fileUpload')
+    const plik = document.getElementById('fileUpload')
     const output = document.getElementById('output')
 
-    file.addEventListener('change', () =>{
 
-         let fr = new FileReader()
+        
 
+         console.log(fr)
+         console.log(fr.result)
          fr.onload = function () {
 
           output.textContent = fr.result
 
 
+
          }
 
+        
 
-    })
+
+    
 
 
 
@@ -34,8 +48,7 @@ function App() {
 
         <div>
           <p>Dodaj najnowsze stany magazynu</p>
-          <input type="file"  id="fileUpload"/>
-          <button onClick={handleUploadFile}>Upload File</button>
+          <input type="file"  id="fileUpload" onChange={handleUploadFile}/>
         </div>
 
         <div>
