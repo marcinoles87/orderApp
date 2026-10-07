@@ -13,32 +13,19 @@ function App() {
      let fr = new FileReader()
 
      fr.readAsText(file)
-    
-    const plik = document.getElementById('fileUpload')
-    const output = document.getElementById('output')
 
+     fr.onload = () =>{
 
-        
+      const content = document.getElementById('output')
 
-         console.log(fr)
-         console.log(fr.result)
-         fr.onload = function () {
+      console.log(fr.result)
 
-          output.textContent = fr.result
-
-
-
-         }
-
-        
-
-
+      content.textContent = fr.result
+     }
     
 
 
-
-   
-
+  
 
   }
 
