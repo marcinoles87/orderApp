@@ -7,19 +7,19 @@ function App() {
  
   const handleUploadFile = (e) =>{
 
-    console.log(e)
+    console.log(e.target)
     e.preventDefault()
 
     const file = e.target.files[0]
-    const fr = new FileReader()
+    const reader = new FileReader()
 
-     fr.readAsText(file)
+    reader.onload = (e) =>{
 
-     fr.onload = () =>{
-
-      const content = document.getElementById('output')
-      setText(fr.result)
+      document.getElementById('output').value = e.target.result
+      setText(e.target.result)
      }
+
+     reader.readAsText(file)
     
 
 
