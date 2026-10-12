@@ -48,6 +48,7 @@ function App() {
         <div>
           <p>Stany</p>
           <p id="output">{text}</p>
+          <Stany></Stany>
         </div>
 
      
