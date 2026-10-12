@@ -4,6 +4,7 @@ import Stany from "./assets/components/Stany"
 
 function App() {
 
+
   const [text,setText] = useState('')
  
   const handleUploadFile = (e) =>{
