@@ -30,6 +30,12 @@
   }
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
@@ -55,7 +61,7 @@ body {
 }
 
 #root {
-  width: 1126px;
+
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -109,3 +115,5 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+

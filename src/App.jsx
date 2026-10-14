@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Stany from "./assets/components/Stany"
+import '../src/App.css'
 
 
 function App() {
