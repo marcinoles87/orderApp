@@ -37,15 +37,16 @@ function Stany() {
                 </thead>
                 
                 <tbody>
+
                    {stany.map( (item) =>{
-                return(
-                    <>
-                    <tr key={item.INDEKS}>
-                        <th>{item.GRUPA}</th>
-                        <th>{item.NAZWA}</th>
-                        <th>{Math.trunc(item.STAN_KIL)}</th>
-                    </tr>
-                    </>
+                    return(
+                            <>
+                            <tr key={item.INDEKS}>
+                                <th>{item.GRUPA}</th>
+                                <th>{item.NAZWA}</th>
+                                <th>{Math.trunc(item.STAN_KIL)}</th>
+                            </tr>
+                            </>
                     
                     
                 )
