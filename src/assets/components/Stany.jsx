@@ -13,13 +13,14 @@ function Stany() {
     
     async function loadData() {
 
-        setStany(database)
+        setStany(database.slice(0,10))
     }  
 
     loadData()
 
-    console.log(stany)
  },[])
+
+ console.log(stany)
 
    
   return (
@@ -35,7 +36,7 @@ function Stany() {
                 </thead>
                 
                 <tbody>
-                   {database.map( (item) =>{
+                   {stany.map( (item) =>{
                 return(
                     <>
                     <tr key={item.INDEKS}>
