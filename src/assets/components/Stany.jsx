@@ -32,6 +32,7 @@ function Stany() {
                    <tr>
                         <th>Grupa</th>
                         <th>Nazwa</th>
+                        <th>Stan</th>
                     </tr> 
                 </thead>
                 
@@ -42,6 +43,7 @@ function Stany() {
                     <tr key={item.INDEKS}>
                         <th>{item.GRUPA}</th>
                         <th>{item.NAZWA}</th>
+                        <th>{item.STAN_KIL}</th>
                     </tr>
                     </>
                     
