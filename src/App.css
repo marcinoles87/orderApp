@@ -8,6 +8,13 @@
   width: 100vw;
 }
 
+.koszyk{
+  width: max-content;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
 .stany-container{
   display: flex;
   justify-content: center;

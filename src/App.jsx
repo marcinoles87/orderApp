@@ -7,6 +7,7 @@ function App() {
 
 
   const [text,setText] = useState('')
+  const [koszyk,setKoszyk] = useState([])
  
   const handleUploadFile = (e) =>{
 
@@ -38,6 +39,11 @@ function App() {
         <div>
           <p>Dodaj najnowsze stany magazynu</p>
           <input type="file"  id="fileUpload" onChange={ (e) => handleUploadFile(e)}/>
+        </div>
+
+        <div className="koszyk">
+          <span>Koszyk {koszyk.length}</span>
+
         </div>
 
         <div>
