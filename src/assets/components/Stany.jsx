@@ -27,8 +27,7 @@ function Stany({setKoszyk}) {
 
  const addItem = (item) =>{
 
-    console.log(item)
-    setKoszyk(item)
+    setKoszyk( prev => [...prev,item])
  }
    
   return (
