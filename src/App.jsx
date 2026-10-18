@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Stany from "./assets/components/Stany"
 import '../src/App.css'
+import Koszyk from "./assets/components/Koszyk"
 
 
 function App() {
@@ -41,10 +42,7 @@ function App() {
           <input type="file"  id="fileUpload" onChange={ (e) => handleUploadFile(e)}/>
         </div>
 
-        <div className="koszyk">
-          <span>Koszyk {koszyk.length}</span>
-
-        </div>
+        <Koszyk koszyk={koszyk}></Koszyk>
 
         <div>
           <p>Login Admin</p>
