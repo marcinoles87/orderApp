@@ -3,7 +3,9 @@ import { useEffect, useState } from 'react'
 
 
 
-function Stany() {
+function Stany({setKoszyk}) {
+
+    console.log(setKoszyk)
 
  const [stany,setStany] = useState([])
 
@@ -26,6 +28,7 @@ function Stany() {
  const addItem = (item) =>{
 
     console.log(item)
+    setKoszyk(item)
  }
    
   return (
