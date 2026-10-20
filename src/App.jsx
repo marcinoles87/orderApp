@@ -1,6 +1,9 @@
 import { useState } from "react"
-import Stany from "./assets/components/Stany"
+import {  BrowserRouter, Link, Route, Routes } from "react-router-dom"
 import '../src/App.css'
+
+import Stany from "./assets/components/Stany"
+import Zamowienie from "./assets/components/Zamowienie"
 import Koszyk from "./assets/components/Koszyk"
 
 
@@ -35,6 +38,7 @@ function App() {
 
   return (
     <div className='app-container'>
+      <BrowserRouter>
       <h1>Platforma do tworzenia zamówień</h1>
 
         <div>
@@ -42,7 +46,10 @@ function App() {
           <input type="file"  id="fileUpload" onChange={ (e) => handleUploadFile(e)}/>
         </div>
 
+        
+        <Link to={'zamowienie'}>Zamawiam</Link>
         <Koszyk koszyk={koszyk}></Koszyk>
+
 
         <div>
           <p>Login Admin</p>
@@ -58,8 +65,13 @@ function App() {
           <Stany setKoszyk={setKoszyk}></Stany>
         </div>
 
-     
+        <Routes>
+          <Route path="zamowienie" element={<Zamowienie></Zamowienie>}></Route>
+        </Routes>
+
+     </BrowserRouter>
     </div>
+  
   )
 }
 

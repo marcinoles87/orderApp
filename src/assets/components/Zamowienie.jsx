@@ -1,8 +1,9 @@
-import React from 'react'
 
 function Zamowienie() {
   return (
-    <div>Zamowienie</div>
+    <div className="zamowienie-container">
+      <h1>Zamowienie</h1>
+    </div>
   )
 }
 
