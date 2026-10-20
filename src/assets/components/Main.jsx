@@ -1,4 +1,3 @@
-import React from 'react'
 import Stany from './Stany'
 
 function Main({text,setKoszyk}) {

@@ -64,7 +64,7 @@ function App() {
 
         <Routes>
           <Route path="*" element={<Main text={text} setKoszyk={setKoszyk}></Main>} ></Route>
-          <Route path="zamowienie" element={<Zamowienie></Zamowienie>}></Route>
+          <Route path="zamowienie" element={<Zamowienie koszyk={koszyk}></Zamowienie>}></Route>
         </Routes>
 
      </BrowserRouter>
