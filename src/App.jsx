@@ -5,6 +5,7 @@ import '../src/App.css'
 import Stany from "./assets/components/Stany"
 import Zamowienie from "./assets/components/Zamowienie"
 import Koszyk from "./assets/components/Koszyk"
+import Main from "./assets/components/Main"
 
 
 function App() {
@@ -59,13 +60,10 @@ function App() {
           <p>Login User</p>
         </div>
 
-        <div>
-          <p>Stany</p>
-          <p id="output">{text}</p>
-          <Stany setKoszyk={setKoszyk}></Stany>
-        </div>
+       
 
         <Routes>
+          <Route path="*" element={<Main text={text} setKoszyk={setKoszyk}></Main>} ></Route>
           <Route path="zamowienie" element={<Zamowienie></Zamowienie>}></Route>
         </Routes>
 
