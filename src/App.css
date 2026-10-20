@@ -21,6 +21,19 @@
   align-items: center;
 }
 
+.stany-data{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+}
+
+.stany-data p{
+  margin: 5px;
+}
+
 .table tbody th tr{
   margin: 10px;
 }

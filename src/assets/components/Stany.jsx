@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react'
 
 function Stany({setKoszyk}) {
 
-    console.log(setKoszyk)
 
  const [stany,setStany] = useState([])
 
@@ -34,29 +33,19 @@ function Stany({setKoszyk}) {
     <div className='stany-container'>
         <div className='stany-datas'>
             <h1>Stany</h1>
-            <table>
-                <thead>
-                   <tr>
-                        <th>Grupa</th>
-                        <th>Indeks</th>
-                        <th>Nazwa</th>
-                        <th>Stan</th>
-                    </tr> 
-                </thead>
-                
-                <tbody>
+            
 
                    {stany.map( (item) =>{
                     return(
                             
-                            <tr key={item.INDEKS}>
-                                <th>{item.GRUPA}</th>
-                                <th>{item.INDEKS}</th>
-                                <th>{item.NAZWA}</th>
-                                <th>{Math.trunc(item.STAN_KIL)}</th>
-                                <button onClick={ () => addItem(item)}>add</button>
+                            <div className='stany-data' key={item.INDEKS}>
+                                <p>{item.GRUPA} </p>
+                                <p>{item.INDEKS} </p>
+                                <p>{item.NAZWA} </p>
+                                <p>{Math.trunc(item.STAN_KIL)} </p>
+                                <button onClick={ () => addItem(item)}> add</button>
                                 
-                            </tr>
+                            </div>
                             
                             
                             
@@ -64,11 +53,7 @@ function Stany({setKoszyk}) {
                     
                 )
             })} 
-                </tbody>
                 
-
-
-            </table>
         </div>
 
     </div>

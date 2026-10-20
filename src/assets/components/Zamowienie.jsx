@@ -1,5 +1,8 @@
 
+
 function Zamowienie({koszyk}) {
+
+  
 
   const thStyle = {
   borderBottom: "2px solid #ccc",
@@ -28,7 +31,7 @@ function getColor(stock) {
           <th style={thStyle}>Produkt</th>
           <th style={thStyle}>SKU</th>
           <th style={thStyle}>Ilosc</th>
-          <th style={thStyle}>Stan</th>
+          <th style={thStyle}>Stan magazynu</th>
         </tr>
       </thead>
 
