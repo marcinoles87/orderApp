@@ -26,6 +26,8 @@ function Stany({setKoszyk}) {
 
  const addItem = (item) =>{
 
+    const koszyk = document.querySelector('.koszyk-container')
+    koszyk.classList.toggle('resize')
     setKoszyk( prev => [...prev,item])
  }
    
