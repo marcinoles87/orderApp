@@ -28,44 +28,50 @@ function App() {
       setText(e.target.result)
      }
 
-     reader.readAsText(file)
-    
-
-
-     console.log(text)
-  
+     reader.readAsText(file)  
 
   }
 
   return (
     <div className='app-container'>
       <BrowserRouter>
-      <h1>Platforma do tworzenia zamówień</h1>
 
-        <div>
-          <p>Dodaj najnowsze stany magazynu</p>
+      <div className="panel-left-container">
+
+         <div className="stany-container">
+          <p>Dodaj stany </p>
           <input type="file"  id="fileUpload" onChange={ (e) => handleUploadFile(e)}/>
         </div>
 
-        
-        <Link to={'zamowienie'}>Zamawiam</Link>
-        <Koszyk koszyk={koszyk}></Koszyk>
-
-
-        <div>
+         <div className="admin-container">
           <p>Login Admin</p>
+          <button>Login</button>
         </div>
 
-        <div>
+        <div className="user-container">
           <p>Login User</p>
         </div>
 
+      </div>
+
        
+
+        
+        
+
+
+       
+      <div className="panel-right-container">
+              <h1>Platforma do tworzenia zamówień</h1>
+
+        <Koszyk koszyk={koszyk}></Koszyk>
 
         <Routes>
           <Route path="*" element={<Main text={text} setKoszyk={setKoszyk}></Main>} ></Route>
           <Route path="zamowienie" element={<Zamowienie koszyk={koszyk}></Zamowienie>}></Route>
         </Routes>
+      </div>
+       
 
      </BrowserRouter>
     </div>
