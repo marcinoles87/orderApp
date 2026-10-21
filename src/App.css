@@ -15,8 +15,48 @@
 .panel-left-container{
   display: flex;
   flex-direction: column;
-  width: 30vw;
+  align-items:flex-start;
+  width: max-content;
+  height: 100vh;
+  padding-left: 10px;
+  background-color: rgb(4, 6, 27);
 }
+
+.panel-left-container p{
+  margin: 5px;
+}
+
+.admin-container{
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  
+}
+
+.admin-container input{
+  margin: 5px auto;
+  padding: 5px;
+}
+
+.admin-container button{
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/*right panel*/
+
+.panel-right-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+
+}
+
+/*koszyk*/
+
 
 .koszyk-container{
   position: fixed;
@@ -47,13 +87,20 @@
   align-items: center;
 }
 
+.stany-plik-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
 .stany-data{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   padding: 10px;
-  margin: 5px;
+  margin: auto 15px;
 }
 
 .stany-data p{
@@ -62,6 +109,12 @@
 
 .table tbody th tr{
   margin: 10px;
+}
+
+/*zmiana widocznosci*/
+
+.visible{
+  visibility: visible;
 }
 
 /*zmiana skali koszyka*/

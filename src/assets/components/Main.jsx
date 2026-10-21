@@ -4,7 +4,6 @@ function Main({text,setKoszyk}) {
   return (
     <div className='main-container'>
          <div>
-          <p>Stany</p>
           <p id="output">{text}</p>
           <Stany setKoszyk={setKoszyk}></Stany>
         </div>
