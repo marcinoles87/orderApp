@@ -117,8 +117,18 @@
 .stany-data button{
   width: max-content;
   padding:10px 10px;
+  background: linear-gradient(145deg, #004d40, #10b981);
+  border: 0.2px solid black;
   border-radius: 10px;
   cursor: pointer;
+  color:white;
+  transition: 1s ease;
+}
+
+.stany-data button:hover{
+  background: linear-gradient(145deg, #21665b, #15ffb1);
+
+
 }
 
 .table tbody th tr{
