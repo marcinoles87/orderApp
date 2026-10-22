@@ -44,7 +44,7 @@ function Stany({setKoszyk}) {
                                 <p>{item.GRUPA} </p>
                                 <p>{item.INDEKS} </p>
                                 <p>{item.NAZWA} </p>
-                                <p>{Math.trunc(item.STAN_KIL)} </p>
+                                <p>{Math.trunc(item.STAN_KIL)} szt </p>
                                 <button onClick={ () => addItem(item)}> add</button>
                                 
                             </div>

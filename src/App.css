@@ -76,6 +76,12 @@
 }
 
 .koszyk-container a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  height: max-content;
   text-decoration: none;
   color:white;
   
@@ -101,10 +107,18 @@
   align-items: center;
   padding: 10px;
   margin: auto 15px;
+  border-bottom: 1px solid black;
 }
 
 .stany-data p{
   margin: 5px;
+}
+
+.stany-data button{
+  width: max-content;
+  padding:10px 10px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .table tbody th tr{
