@@ -10,8 +10,6 @@ function Stany({setKoszyk}) {
 
  useEffect( () => {
 
-
-    
     async function loadData() {
 
         setStany(database.slice(0,10))
@@ -45,7 +43,7 @@ function Stany({setKoszyk}) {
                                 <p>{item.INDEKS} </p>
                                 <p>{item.NAZWA} </p>
                                 <p>{Math.trunc(item.STAN_KIL)} szt </p>
-                                <button onClick={ () => addItem(item)}> add</button>
+                                <button onClick={ () => addItem(item)}> ADD</button>
                                 
                             </div>
                             

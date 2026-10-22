@@ -68,9 +68,9 @@
   width: 100px;
   height: 100px;
   padding: 5px;
-  border: 1px solid black;
+  border: none;
   border-radius: 100px;
-  background-color: cadetblue;
+  background-color: rgb(35, 163, 168);
   text-align: center;
   
 }
@@ -117,19 +117,16 @@
 .stany-data button{
   width: max-content;
   padding:10px 10px;
-  background: linear-gradient(145deg, #004d40, #10b981);
-  border: 0.2px solid black;
+  background-color: #15ffb1;
+  border: none;
   border-radius: 10px;
   cursor: pointer;
-  color:white;
-  transition: 1s ease;
+  color:rgb(15, 52, 20);
+  font-weight: bold;
 }
 
-.stany-data button:hover{
-  background: linear-gradient(145deg, #21665b, #15ffb1);
 
 
-}
 
 .table tbody th tr{
   margin: 10px;
