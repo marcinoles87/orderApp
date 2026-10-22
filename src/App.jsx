@@ -28,16 +28,17 @@ function App() {
 
       document.getElementById('output').value = e.target.result
       setText(e.target.result)
+
      }
 
-     reader.readAsText(file)  
+     reader.readAsText(file)
 
   }
 
   const handleAdminLogin = () =>{
     if(admin==='m500' &adminHaslo==='m500pass' ){
       alert('dane poprawne moze dodac stany')
-      document.querySelector('.stany-container').classList.add('visible')
+      document.querySelector('.stany-plik-container').classList.add('visible')
     }else{
       alert('zle dane')
     }

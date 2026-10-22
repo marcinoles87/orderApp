@@ -30,6 +30,7 @@ function getColor(stock) {
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
       <thead style={{textAlign:'center'}}>
         <tr>
+          <th style={thStyle}>Grupa</th>
           <th style={thStyle}>Produkt</th>
           <th style={thStyle}>SKU</th>
           <th style={thStyle}>Ilosc</th>
@@ -40,6 +41,7 @@ function getColor(stock) {
       <tbody>
         {koszyk.map((item) => (
           <tr key={item.sku} style={{textAlign :'center'}}>
+            <td style={tdStyle}>{item.GRUPA}</td>
             <td style={tdStyle}>{item.NAZWA.slice(0,30)}</td>
             <td style={tdStyle}>{item.INDEKS}</td>
             <td style={tdStyle}>1szt</td>
