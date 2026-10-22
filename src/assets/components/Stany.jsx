@@ -1,5 +1,6 @@
 import database from '../json/MGL.json'
 import { useEffect, useState } from 'react'
+import Filters from './Filters'
 
 
 
@@ -33,7 +34,8 @@ function Stany({setKoszyk}) {
     <div className='stany-container'>
         <div className='stany-datas'>
             <h1>Stany</h1>
-            
+
+                <Filters></Filters>
 
                    {stany.map( (item) =>{
                     return(

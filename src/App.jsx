@@ -1,8 +1,7 @@
 import { useState } from "react"
-import {  BrowserRouter, Link, Route, Routes } from "react-router-dom"
+import {  BrowserRouter,  Route, Routes } from "react-router-dom"
 import '../src/App.css'
 
-import Stany from "./assets/components/Stany"
 import Zamowienie from "./assets/components/Zamowienie"
 import Koszyk from "./assets/components/Koszyk"
 import Main from "./assets/components/Main"
