@@ -1,5 +1,8 @@
 
-function Filters() {
+function Filters({stany,setStany}) {
+
+
+  
   return (
     <div className='filters-container'>
         <div>

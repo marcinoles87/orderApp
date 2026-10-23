@@ -1,11 +1,11 @@
 import Stany from './Stany'
 
-function Main({text,setKoszyk}) {
+function Main({text,setKoszyk,stany,setStany}) {
   return (
     <div className='main-container'>
          <div>
           <p id="output">{text}</p>
-          <Stany setKoszyk={setKoszyk}></Stany>
+          <Stany stany={stany} setStany={setStany} setKoszyk={setKoszyk}></Stany>
         </div>
         
     </div>

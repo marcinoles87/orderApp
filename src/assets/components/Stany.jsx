@@ -4,10 +4,9 @@ import Filters from './Filters'
 
 
 
-function Stany({setKoszyk}) {
+function Stany({stany,setStany,setKoszyk}) {
 
 
- const [stany,setStany] = useState([])
 
  useEffect( () => {
 
@@ -35,7 +34,7 @@ function Stany({setKoszyk}) {
         <div className='stany-datas'>
             <h1>Stany</h1>
 
-                <Filters></Filters>
+                <Filters stany={stany} setStany={setStany}></Filters>
 
                    {stany.map( (item) =>{
                     return(
