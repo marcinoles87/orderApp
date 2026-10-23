@@ -7,10 +7,17 @@ function Filters({stany,setStany}) {
   const [produkt,setProdukt] = useState('')
   const [kod,setKod] = useState('')
 
+  const stanyNowe = [...stany]
+  console.log(stanyNowe)
 
   const handleClik = () =>{
 
+    const filtered = stany.filter( item => item.GRUPA.includes(grupa))
+
+    setStany(filtered)
+
     
+
   }
 
 
