@@ -108,6 +108,8 @@
   padding: 10px;
   margin: 5px 15px;
   background-color: #baf7ba;
+  border-radius: 10px;
+  color:black;
 }
 
 .stany-data p{

@@ -21,7 +21,7 @@ function Stany({stany,setStany,setKoszyk}) {
 
  const getColor = (stan) =>{
     if(stan <2) return 'red';
-    if(stan >=2) return 'green';
+    if(stan >=2) return 'blue';
    
  }
 
@@ -48,7 +48,7 @@ function Stany({stany,setStany,setKoszyk}) {
                                 <p>{item.GRUPA} </p>
                                 <p>{item.INDEKS} </p>
                                 <p>{item.NAZWA} </p>
-                                <p style={{color:getColor(item.STAN_KIL)}}>{Math.trunc(item.STAN_KIL)} szt </p>
+                                <p style={{color:getColor(item.STAN_KIL),fontWeight:'700'}}>{Math.trunc(item.STAN_KIL)} szt </p>
                                 <button onClick={ () => addItem(item)}> ADD</button>
                                 
                             </div>
