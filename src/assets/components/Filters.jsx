@@ -8,17 +8,23 @@ function Filters({stany,setStany}) {
   const [kod,setKod] = useState('')
 
   const stanyNowe = [...stany]
-  console.log(stanyNowe)
+
+
 
   const handleClik = () =>{
 
     const filtered = stany.filter( item => item.GRUPA.includes(grupa))
 
-    setStany(filtered)
-
-    
-
+    if(filtered.length ===0){
+      setStany(stany)
+      alert('brak wyszukiwania')
+    }else{
+       setStany(filtered)
+    }
+   
   }
+
+
 
 
   return (
