@@ -76,7 +76,6 @@ function App() {
 
       </div>
 
-      
        
       <div className="panel-right-container">
               {/* <h1>Platforma do tworzenia zamówień</h1> */}

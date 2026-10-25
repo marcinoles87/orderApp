@@ -106,8 +106,8 @@
   justify-content: left;
   align-items: center;
   padding: 10px;
-  margin: auto 15px;
-  border-bottom: 1px solid black;
+  margin: 5px 15px;
+  background-color: #baf7ba;
 }
 
 .stany-data p{
