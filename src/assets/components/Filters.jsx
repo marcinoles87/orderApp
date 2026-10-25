@@ -9,7 +9,8 @@ function Filters({stany,setStany}) {
 
   const stanyNowe = [...stany]
 
-
+  console.log(stany)
+  console.log(stanyNowe)
 
   const handleClik = () =>{
 

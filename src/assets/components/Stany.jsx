@@ -12,7 +12,7 @@ function Stany({stany,setStany,setKoszyk}) {
 
     async function loadData() {
 
-        setStany(database.slice(0,10))
+        setStany(database.slice(0,20))
     }  
 
     loadData()

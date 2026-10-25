@@ -48,11 +48,18 @@
 /*right panel*/
 
 .panel-right-container{
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin: 10px;
 
+}
+
+/*zamowienie*/
+
+.zamowienie-container{
+  width: 100%;
 }
 
 /*koszyk*/
