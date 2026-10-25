@@ -42,7 +42,7 @@ function getColor(stock) {
         {koszyk.map((item) => (
           <tr key={item.sku} style={{textAlign :'center'}}>
             <td style={tdStyle}>{item.GRUPA}</td>
-            <td style={tdStyle}>{item.NAZWA.slice(0,30)}</td>
+            <td style={tdStyle}>{item.NAZWA}</td>
             <td style={tdStyle}>{item.INDEKS}</td>
             <td style={tdStyle}>1szt</td>
             <td style={{ ...tdStyle, color: getColor(item.STAN_KIL) }}>
