@@ -11,8 +11,9 @@ function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
 
   console.log(stany)
   console.log(stanyNowe)
+  console.log(filtered)
 
-  const handleClik = () =>{
+  const handleSearch = () =>{
 
     const filteredStany = stany.filter( item => item.GRUPA.includes(grupa))
 
@@ -21,7 +22,8 @@ function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
       alert('brak wyszukiwania')
 
     }else{
-       setFiltered(filteredStany)
+      setFiltered(filteredStany)
+      setStanyPoprawne(false)
     }
    
   }
@@ -30,10 +32,10 @@ function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
     <div className='filters-container'>
         <div>
             <h2>Filters</h2>
-            <input type="text" placeholder="grupa" onChange={(e) =>setGrupa(e.target.value)}/>
+            <input type="text" placeholder="grupa" onChange={(e) =>setGrupa(e.target.value.toUpperCase())}/>
             <input type="text" placeholder="produkt" onChange={(e) =>setProdukt(e.target.value)}/>
             <input type="text" placeholder="kod" onChange={(e) =>setKod(e.target.value)}/>
-            <button onClick={handleClik}>Zastosuj</button>
+            <button onClick={handleSearch}>Zastosuj</button>
         </div>
     </div>
   )

@@ -31,8 +31,8 @@ function getColor(stock) {
       <thead style={{textAlign:'center'}}>
         <tr>
           <th style={thStyle}>Grupa</th>
-          <th style={thStyle}>Produkt</th>
           <th style={thStyle}>SKU</th>
+          <th style={thStyle}>Produkt</th>
           <th style={thStyle}>Ilosc</th>
           <th style={thStyle}>Stan magazynu</th>
         </tr>
@@ -42,8 +42,8 @@ function getColor(stock) {
         {koszyk.map((item) => (
           <tr key={item.sku} style={{textAlign :'center'}}>
             <td style={tdStyle}>{item.GRUPA}</td>
-            <td style={tdStyle}>{item.NAZWA}</td>
             <td style={tdStyle}>{item.INDEKS}</td>
+            <td style={tdStyle}>{item.NAZWA}</td>
             <td style={tdStyle}>1szt</td>
             <td style={{ ...tdStyle, color: getColor(item.STAN_KIL) }}>
               {item.STAN_KIL}

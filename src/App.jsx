@@ -45,7 +45,6 @@ function App() {
     }
   }
 
-  console.log(admin)
 
   return (
     <div className='app-container'>

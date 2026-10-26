@@ -6,18 +6,18 @@ import Filters from './Filters'
 
 function Stany({stany,setStany,setKoszyk, filtered, setFiltered}) {
 
-const [stanyPoprawne,setStanyPoprawne] = useState(false)
+const [stanyPoprawne,setStanyPoprawne] = useState(true)
 
  useEffect( () => {
 
     async function loadData() {
 
-        setStany(database.slice(0,20))
+        setStany(database.slice(0,200))
     }  
 
     loadData()
 
- },)
+ },[])
 
   const thStyle = {
   borderBottom: "2px solid #ccc",
@@ -63,8 +63,8 @@ const tdStyle = {
       <thead style={{textAlign:'center'}}>
         <tr>
           <th style={thStyle}>Grupa</th>
-          <th style={thStyle}>Produkt</th>
           <th style={thStyle}>SKU</th>
+          <th style={thStyle}>Produkt</th>
           <th style={thStyle}>Ilosc</th>
           <th style={thStyle}>Stan magazynu</th>
         </tr>
@@ -75,8 +75,8 @@ const tdStyle = {
         stany.map((item) => (
           <tr key={item.sku} style={{textAlign :'center'}}>
             <td style={tdStyle}>{item.GRUPA}</td>
-            <td style={tdStyle}>{item.NAZWA}</td>
             <td style={tdStyle}>{item.INDEKS}</td>
+            <td style={tdStyle}>{item.NAZWA}</td>
             <td style={{ ...tdStyle, color: getColor(item.STAN_KIL) }}>
               {item.STAN_KIL}
             </td>
@@ -84,7 +84,18 @@ const tdStyle = {
           </tr>
         ))
 
-        : filtered}
+        :  filtered.map((item) => (
+          <tr key={item.sku} style={{textAlign :'center'}}>
+            <td style={tdStyle}>{item.GRUPA}</td>
+            <td style={tdStyle}>{item.INDEKS}</td>
+            <td style={tdStyle}>{item.NAZWA}</td>
+            <td style={{ ...tdStyle, color: getColor(item.STAN_KIL) }}>
+              {item.STAN_KIL}
+            </td>
+            <button onClick={ () =>addItem(item)}>Dodaj</button>
+          </tr>
+        ))
+      }
       </tbody>
     </table>
                             
