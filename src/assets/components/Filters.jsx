@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-function Filters({stany,setStany}) {
+function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
 
 
   const [grupa,setGrupa] = useState('')
@@ -14,13 +14,14 @@ function Filters({stany,setStany}) {
 
   const handleClik = () =>{
 
-    const filtered = stany.filter( item => item.GRUPA.includes(grupa))
+    const filteredStany = stany.filter( item => item.GRUPA.includes(grupa))
 
-    if(filtered.length ===0){
-      setStany(stany)
+    if(filteredStany.length ===0){
+      setStanyPoprawne(true)
       alert('brak wyszukiwania')
+
     }else{
-       setStany(filtered)
+       setFiltered(filteredStany)
     }
    
   }

@@ -1,12 +1,12 @@
 import database from '../json/MGL.json'
-import { useEffect} from 'react'
+import { useEffect, useState} from 'react'
 import Filters from './Filters'
 
 
 
-function Stany({stany,setStany,setKoszyk}) {
+function Stany({stany,setStany,setKoszyk, filtered, setFiltered}) {
 
-
+const [stanyPoprawne,setStanyPoprawne] = useState(false)
 
  useEffect( () => {
 
@@ -56,7 +56,7 @@ const tdStyle = {
         <div className='stany-datas'>
             <h1>Stany</h1>
 
-                <Filters stany={stany} setStany={setStany}></Filters>
+                <Filters stany={stany} setStany={setStany} filtered={filtered} setFiltered={setFiltered} setStanyPoprawne={setStanyPoprawne}></Filters>
 
                             
    <table style={{ width: "100%", borderCollapse: "collapse" }}>
@@ -71,6 +71,7 @@ const tdStyle = {
       </thead>
 
       <tbody>
+        {stanyPoprawne ?'tak' : filtered}
         {stany.map((item) => (
           <tr key={item.sku} style={{textAlign :'center'}}>
             <td style={tdStyle}>{item.GRUPA}</td>
