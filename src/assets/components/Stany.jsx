@@ -1,5 +1,5 @@
 import database from '../json/MGL.json'
-import { useEffect, useState } from 'react'
+import { useEffect} from 'react'
 import Filters from './Filters'
 
 
@@ -17,7 +17,7 @@ function Stany({stany,setStany,setKoszyk}) {
 
     loadData()
 
- },[])
+ },)
 
   const thStyle = {
   borderBottom: "2px solid #ccc",
@@ -59,7 +59,7 @@ const tdStyle = {
                 <Filters stany={stany} setStany={setStany}></Filters>
 
                             
-                            <table style={{ width: "100%", borderCollapse: "collapse" }}>
+   <table style={{ width: "100%", borderCollapse: "collapse" }}>
       <thead style={{textAlign:'center'}}>
         <tr>
           <th style={thStyle}>Grupa</th>

@@ -15,6 +15,7 @@ function App() {
   const [text,setText] = useState('')
   const [koszyk,setKoszyk] = useState([])
   const [stany,setStany] = useState([])
+  const [filtered,setFiltered] = useState([])
  
   const handleUploadFile = (e) =>{
 
@@ -83,7 +84,7 @@ function App() {
         <Koszyk koszyk={koszyk}></Koszyk>
 
         <Routes>
-          <Route path="*" element={<Main text={text} setKoszyk={setKoszyk} stany={stany} setStany={setStany}></Main>} ></Route>
+          <Route path="*" element={<Main text={text} setKoszyk={setKoszyk} stany={stany} setStany={setStany} filtered={filtered} setFiltered={setFiltered}></Main>} ></Route>
           <Route path="zamowienie" element={<Zamowienie koszyk={koszyk}></Zamowienie>}></Route>
         </Routes>
       </div>
