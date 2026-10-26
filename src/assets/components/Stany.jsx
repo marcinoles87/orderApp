@@ -71,8 +71,8 @@ const tdStyle = {
       </thead>
 
       <tbody>
-        {stanyPoprawne ?'tak' : filtered}
-        {stany.map((item) => (
+        {stanyPoprawne ? 
+        stany.map((item) => (
           <tr key={item.sku} style={{textAlign :'center'}}>
             <td style={tdStyle}>{item.GRUPA}</td>
             <td style={tdStyle}>{item.NAZWA}</td>
@@ -82,7 +82,9 @@ const tdStyle = {
             </td>
             <button onClick={ () =>addItem(item)}>Dodaj</button>
           </tr>
-        ))}
+        ))
+
+        : filtered}
       </tbody>
     </table>
                             
