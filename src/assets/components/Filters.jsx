@@ -18,12 +18,7 @@ function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
     
 
     const filteredStany = stany.filter( item => item.GRUPA.includes(grupa))
-    const filteredStanyProdukt = stany.filter( item => item.NAZWA.includes(produkt))
-    const filteredStanyKod = stany.filter( item => item.INDEKS.includes(kod))
 
-    console.log(filteredStanyProdukt)
-    console.log(filteredStany)
-    console.log(filteredStanyKod)
 
       if(filteredStany.length ===0){
       setStanyPoprawne(true)
