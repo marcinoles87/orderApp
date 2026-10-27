@@ -12,7 +12,7 @@ const [stanyPoprawne,setStanyPoprawne] = useState(true)
 
     async function loadData() {
 
-        setStany(database.slice(0,200))
+        setStany(database.slice(0,20))
     }  
 
     loadData()
