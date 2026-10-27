@@ -15,9 +15,11 @@ function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
 
   const handleSearch = () =>{
 
+    
+
     const filteredStany = stany.filter( item => item.GRUPA.includes(grupa))
 
-    if(filteredStany.length ===0){
+      if(filteredStany.length ===0){
       setStanyPoprawne(true)
       alert('brak wyszukiwania')
 
@@ -25,7 +27,11 @@ function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
       setFiltered(filteredStany)
       setStanyPoprawne(false)
     }
-   
+  
+  }
+
+  const handleReset = () =>{
+    setStanyPoprawne(true)
   }
 
   return (
@@ -36,6 +42,7 @@ function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
             <input type="text" placeholder="produkt" onChange={(e) =>setProdukt(e.target.value)}/>
             <input type="text" placeholder="kod" onChange={(e) =>setKod(e.target.value)}/>
             <button onClick={handleSearch}>Zastosuj</button>
+            <button onClick={handleReset}>Reset</button>
         </div>
     </div>
   )
