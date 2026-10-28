@@ -18,20 +18,22 @@ function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
 
     
 
-    let filteredStany = stany.filter( item => item.GRUPA.includes(grupa) )
+    let filteredGrupa = stany.filter( item => item.GRUPA.includes(grupa) )
     let filteredKod = stany.filter( item =>item.INDEKS.includes(kod) )
+    let filteredProdukt = stany.filter( item =>item.NAZWA.includes(produkt) )
 
     console.log(kod)
-    console.log(grupa)
+    console.log(filteredGrupa)
     console.log(filteredKod)
+    console.log(filteredProdukt)
 
 
-      if(filteredStany.length ===0){
+      if(filteredGrupa.length ===0){
       setStanyPoprawne(true)
       alert('brak wyszukiwania')
 
     }else{
-      setFiltered(filteredStany)
+      setFiltered(filteredGrupa)
       setStanyPoprawne(false)
     }
 
