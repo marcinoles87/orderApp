@@ -18,7 +18,7 @@ function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
 
     
 
-    let filteredStany = stany.filter( item => item.GRUPA.includes(grupa))
+    let filteredStany = stany.filter( item => item.GRUPA.includes(grupa) )
     let filteredKod = stany.filter( item =>item.INDEKS.includes(kod) )
 
     console.log(kod)
