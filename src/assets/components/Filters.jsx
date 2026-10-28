@@ -9,10 +9,6 @@ function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
 
   const stanyNowe = [...stany]
 
-  console.log(stany)
-  console.log(stanyNowe)
-  console.log(produkt)
-  console.log(kod)
 
   const handleSearch = () =>{
 
@@ -22,27 +18,17 @@ function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
     let filteredKod = stany.filter( item =>item.INDEKS.includes(kod) )
     let filteredProdukt = stany.filter( item =>item.NAZWA.includes(produkt) )
 
-    console.log(kod)
     console.log(filteredGrupa)
     console.log(filteredKod)
     console.log(filteredProdukt)
 
 
-      if(filteredGrupa.length ===0){
-      setStanyPoprawne(true)
-      alert('brak wyszukiwania')
-
-    }else{
+      if(filteredGrupa.length >1){
       setFiltered(filteredGrupa)
       setStanyPoprawne(false)
     }
 
-  
-      
-    if(filteredKod.length ===0){
-      setStanyPoprawne(true)
-      alert('brak dopasowania')
-    }else{
+    if(filteredKod.length >1){
       setFiltered(filteredKod)
       setStanyPoprawne(false)
     }
