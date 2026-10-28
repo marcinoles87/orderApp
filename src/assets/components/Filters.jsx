@@ -12,12 +12,18 @@ function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
   console.log(stany)
   console.log(stanyNowe)
   console.log(produkt)
+  console.log(kod)
 
   const handleSearch = () =>{
 
     
 
-    const filteredStany = stany.filter( item => item.GRUPA.includes(grupa))
+    let filteredStany = stany.filter( item => item.GRUPA.includes(grupa))
+    let filteredKod = stany.filter( item =>item.INDEKS.includes(kod) )
+
+    console.log(kod)
+    console.log(grupa)
+    console.log(filteredKod)
 
 
       if(filteredStany.length ===0){
@@ -26,6 +32,16 @@ function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
 
     }else{
       setFiltered(filteredStany)
+      setStanyPoprawne(false)
+    }
+
+  
+      
+    if(filteredKod.length ===0){
+      setStanyPoprawne(true)
+      alert('brak dopasowania')
+    }else{
+      setFiltered(filteredKod)
       setStanyPoprawne(false)
     }
 
@@ -42,8 +58,8 @@ function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
         <div>
             <h2>Filters</h2>
             <input type="text" placeholder="grupa" onChange={(e) =>setGrupa(e.target.value.toUpperCase())}/>
+            <input type="text" placeholder="kod SKU" onChange={(e) =>setKod(e.target.value.toUpperCase())}/>
             <input type="text" placeholder="produkt" onChange={(e) =>setProdukt(e.target.value)}/>
-            <input type="text" placeholder="kod" onChange={(e) =>setKod(e.target.value)}/>
             <button onClick={handleSearch}>Zastosuj</button>
             <button onClick={handleReset}>Reset</button>
         </div>
