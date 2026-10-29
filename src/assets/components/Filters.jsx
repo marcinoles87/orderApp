@@ -25,27 +25,22 @@ function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
     console.log(filteredProdukt)
 
 
-      if(filteredGrupa.length >1){
-        console.log(filteredGrupa)
-      setFiltered(filteredGrupa)
-      setStanyPoprawne(false)
+    //   if(filteredGrupa.length >0){
+    //     console.log(filteredGrupa)
+    //   setFiltered(filteredGrupa)
+    //   setStanyPoprawne(false)
      
-    }
+    // }
 
-    if(filteredKod.length >0){
-      setFiltered(filteredKod)
-      setStanyPoprawne(false)
-    }
+    // if(filteredKod.length >0){
+    //   setFiltered(filteredKod)
+    //   setStanyPoprawne(false)
+    // }
 
     if(filteredProdukt.length>1){
       setFiltered(filteredProdukt)
       setStanyPoprawne(false)
     }
-
-    console.log(filtered)
-
-    
-  
   
   }
 
