@@ -16,9 +16,9 @@ function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
     console.log(kod)
     console.log(produkt)
   
-    let filteredGrupa = stany.filter( item => item.GRUPA.includes(grupa) )
-    let filteredKod = stany.filter( item =>item.INDEKS.includes(kod) )
-    let filteredProdukt = stany.filter( item =>item.NAZWA.includes(produkt) )
+    const filteredGrupa = stany.filter( item => item.GRUPA.includes(grupa) )
+    const filteredKod = stany.filter( item =>item.INDEKS.includes(kod) )
+    const filteredProdukt = stany.filter( item =>item.NAZWA.includes(produkt) )
 
     console.log(filteredGrupa)
     console.log(filteredKod)
@@ -42,6 +42,9 @@ function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
       setStanyPoprawne(false)
     }
 
+    console.log(filtered)
+
+    
   
   
   }
