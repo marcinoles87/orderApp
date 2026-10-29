@@ -24,12 +24,19 @@ function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
 
 
       if(filteredGrupa.length >1){
+        console.log(filteredGrupa)
       setFiltered(filteredGrupa)
       setStanyPoprawne(false)
+     
     }
 
     if(filteredKod.length >1){
       setFiltered(filteredKod)
+      setStanyPoprawne(false)
+    }
+
+    if(filteredProdukt.length > 0){
+      setFiltered(filteredProdukt)
       setStanyPoprawne(false)
     }
 
