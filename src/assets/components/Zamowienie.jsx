@@ -2,8 +2,6 @@
 
 function Zamowienie({koszyk}) {
 
-  
-
   const thStyle = {
   borderBottom: "2px solid #ccc",
   padding: "8px",
@@ -44,14 +42,16 @@ function getColor(stock) {
             <td style={tdStyle}>{item.GRUPA}</td>
             <td style={tdStyle}>{item.INDEKS}</td>
             <td style={tdStyle}>{item.NAZWA}</td>
-            <td style={tdStyle}>1szt</td>
+            <td style={tdStyle}>1</td>
             <td style={{ ...tdStyle, color: getColor(item.STAN_KIL) }}>
-              {item.STAN_KIL}
+              {Math.trunc(item.STAN_KIL)}
             </td>
           </tr>
         ))}
       </tbody>
     </table>
+
+    <button>Zamawiam</button>
   
 
 

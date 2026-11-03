@@ -54,7 +54,7 @@ const tdStyle = {
   return (
     <div className='stany-container'>
         <div className='stany-datas'>
-            <h1>Stany</h1>
+            <h1>Stany magazynu </h1>
 
                 <Filters stany={stany} setStany={setStany} filtered={filtered} setFiltered={setFiltered} setStanyPoprawne={setStanyPoprawne}></Filters>
 
