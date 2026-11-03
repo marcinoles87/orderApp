@@ -12,12 +12,6 @@ function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
 
   const handleSearch = () =>{
 
-   
-    
-    const filteredKod = stanyNowe.filter( item =>item.INDEKS.includes(kod) )
-    const filteredProdukt = stanyNowe.filter( item =>item.NAZWA.includes(produkt) )
-
-    console.log(grupa)
 
     if(grupa.length>0){
         const filteredGrupa = stanyNowe.filter( item => item.GRUPA.includes(grupa) )
@@ -27,23 +21,23 @@ function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
 
     }
 
-    
-  
+     if(kod.length>0){
+       const filteredKod = stanyNowe.filter( item =>item.INDEKS.includes(kod) )
+        setFiltered(filteredKod)
+        setStanyPoprawne(false)
+        console.log('kod')
 
-    // if(filteredProdukt.length >=1){
-    //   setFiltered(filteredProdukt)
-    //   setStanyPoprawne(false)
-    //   console.log('produkt')
-    // }
+    }
 
-    // if(filteredGrupa.length >=1){
-      
-      
-    //   console.log('grupa')
-    // }
+    if(produkt.length>0){
+       const filteredProdukt = stanyNowe.filter( item =>item.NAZWA.includes(produkt) )
+        setFiltered(filteredProdukt)
+        setStanyPoprawne(false)
+        console.log('produkt')
 
+    }
 
-  
+   
   }
 
   const handleReset = () =>{
