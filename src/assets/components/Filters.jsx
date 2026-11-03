@@ -14,26 +14,33 @@ function Filters({stany,setStany,filtered,setFiltered,setStanyPoprawne}) {
 
    
     
-    const filteredGrupa = stany.filter( item => item.GRUPA.includes(grupa) )
-    const filteredKod = stany.filter( item =>item.INDEKS.includes(kod) )
-    const filteredProdukt = stany.filter( item =>item.NAZWA.includes(produkt) || stany.filter( item => item.GRUPA.includes(grupa)  ))
+    const filteredKod = stanyNowe.filter( item =>item.INDEKS.includes(kod) )
+    const filteredProdukt = stanyNowe.filter( item =>item.NAZWA.includes(produkt) )
 
-    console.log(filteredGrupa)
-    console.log(filteredKod)
-    console.log(filteredProdukt)
+    console.log(grupa)
 
+    if(grupa.length>0){
+        const filteredGrupa = stanyNowe.filter( item => item.GRUPA.includes(grupa) )
+        setFiltered(filteredGrupa)
+        setStanyPoprawne(false)
+        console.log('grupa')
 
+    }
+
+    
   
 
-    if(filteredProdukt.length >=1){
-      setFiltered(filteredProdukt)
-      setStanyPoprawne(false)
-    }
+    // if(filteredProdukt.length >=1){
+    //   setFiltered(filteredProdukt)
+    //   setStanyPoprawne(false)
+    //   console.log('produkt')
+    // }
 
-    if(filteredGrupa.length >=1){
-      setFiltered(filteredGrupa)
-      setStanyPoprawne(false)
-    }
+    // if(filteredGrupa.length >=1){
+      
+      
+    //   console.log('grupa')
+    // }
 
 
   
