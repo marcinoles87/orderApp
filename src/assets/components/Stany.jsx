@@ -12,7 +12,7 @@ const [stanyPoprawne,setStanyPoprawne] = useState(true)
 
     async function loadData() {
 
-        setStany(database.slice(0,20))
+        setStany(database.slice(0,40))
     }  
 
     loadData()
@@ -78,7 +78,7 @@ const tdStyle = {
             <td style={tdStyle}>{item.INDEKS}</td>
             <td style={tdStyle}>{item.NAZWA}</td>
             <td style={{ ...tdStyle, color: getColor(item.STAN_KIL) }}>
-              {item.STAN_KIL}
+              {Math.trunc(item.STAN_KIL)}
             </td>
             <button onClick={ () =>addItem(item)}>Dodaj</button>
           </tr>
@@ -90,7 +90,7 @@ const tdStyle = {
             <td style={tdStyle}>{item.INDEKS}</td>
             <td style={tdStyle}>{item.NAZWA}</td>
             <td style={{ ...tdStyle, color: getColor(item.STAN_KIL) }}>
-              {item.STAN_KIL}
+              {Math.trunc(item.STAN_KIL)}
             </td>
             <button onClick={ () =>addItem(item)}>Dodaj</button>
           </tr>
