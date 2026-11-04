@@ -12,6 +12,8 @@ function App() {
 
   const [admin,setAdmin] = useState('')
   const [adminHaslo,setAdminHaslo] = useState('')
+  const [login,setLogin] = useState('')
+  const [loginPass,setLoginPass] = useState('')
   const [text,setText] = useState('')
   const [koszyk,setKoszyk] = useState([])
   const [stany,setStany] = useState([])
@@ -45,6 +47,12 @@ function App() {
     }
   }
 
+  const handleLogin = () =>{
+    return(
+      console.log('srodek')
+    )
+  }
+
 
   return (
     <div className='app-container'>
@@ -70,7 +78,7 @@ function App() {
           <p>User</p>
           <input type="text" placeholder="login"/>
           <input type="text" placeholder="hasło" />
-          <button>Login</button>
+          <button onClick={handleLogin}>Login</button>
           
         </div>
 
@@ -85,6 +93,7 @@ function App() {
         <Routes>
           <Route path="*" element={<Main text={text} setKoszyk={setKoszyk} stany={stany} setStany={setStany} filtered={filtered} setFiltered={setFiltered}></Main>} ></Route>
           <Route path="zamowienie" element={<Zamowienie koszyk={koszyk}></Zamowienie>}></Route>
+          <Route path="user" element={<Users login={login} stany={stany} setStany={setStany}></Users>}
         </Routes>
       </div>
        
