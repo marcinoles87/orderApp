@@ -5,6 +5,7 @@ import '../src/App.css'
 import Zamowienie from "./assets/components/Zamowienie"
 import Koszyk from "./assets/components/Koszyk"
 import Main from "./assets/components/Main"
+import Users from "./assets/users/Users"
 
 
 function App() {
@@ -93,7 +94,7 @@ function App() {
         <Routes>
           <Route path="*" element={<Main text={text} setKoszyk={setKoszyk} stany={stany} setStany={setStany} filtered={filtered} setFiltered={setFiltered}></Main>} ></Route>
           <Route path="zamowienie" element={<Zamowienie koszyk={koszyk}></Zamowienie>}></Route>
-          <Route path="user" element={<Users login={login} stany={stany} setStany={setStany}></Users>}
+          <Route path="user" element={<Users login={login} stany={stany} setStany={setStany}></Users>}></Route>
         </Routes>
       </div>
        
