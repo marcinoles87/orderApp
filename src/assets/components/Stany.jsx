@@ -27,8 +27,7 @@ const [stanyPoprawne,setStanyPoprawne] = useState(true)
 };
 
 const tdStyle = {
-    marginLeft: "10px",
-
+  marginLeft: "10px",
   textAlign : 'left',
   borderBottom: "1px solid #eee",
   padding: "8px",

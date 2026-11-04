@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Users() {
+function Users({login,stany,setStany}) {
   return (
     <div className='users-container'>
         
