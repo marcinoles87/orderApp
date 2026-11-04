@@ -49,7 +49,12 @@ function App() {
   }
 
   const handleLogin = () =>{
-    
+
+    if(login ==='MARK4STYLE'){
+      console.log('m4')
+
+      document.querySelector('#inputLogin').value = ''
+    }
   }
 
 
@@ -75,8 +80,8 @@ function App() {
 
          <div className="admin-container">
           <p>User</p>
-          <input type="text" placeholder="login" onChange={ (e) =>setLogin(e.target.value)}/>
-          <input type="text" placeholder="hasło" onChange={ (e) =>setLoginPass(e.target.value)}/>
+          <input id="inputLogin" type="text" placeholder="login" onChange={ (e) =>setLogin(e.target.value)}/>
+          <input id="inputLoginPass" type="text" placeholder="hasło" onChange={ (e) =>setLoginPass(e.target.value)}/>
           <Link to='user' onClick={handleLogin}>Login</Link>
           
         </div>
@@ -92,7 +97,7 @@ function App() {
         <Routes>
           <Route path="*" element={<Main text={text} setKoszyk={setKoszyk} stany={stany} setStany={setStany} filtered={filtered} setFiltered={setFiltered}></Main>} ></Route>
           <Route path="zamowienie" element={<Zamowienie koszyk={koszyk}></Zamowienie>}></Route>
-          <Route path="user" element={<Users login={login} stany={stany} setStany={setStany}></Users>}></Route>
+          <Route path="user" element={<Users login={login} stany={stany} setStany={setStany} setKoszyk={setKoszyk}></Users>}></Route>
         </Routes>
       </div>
        
