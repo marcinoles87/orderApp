@@ -79,8 +79,9 @@ const tdStyle = {
             <td style={{ ...tdStyle, color: getColor(item.STAN_KIL) }}>
               {Math.trunc(item.STAN_KIL)}
             </td>
-            <button onClick={ () =>addItem(item)}>Dodaj</button>
+            
           </tr>
+          
         ))
 
         :  filtered.map((item) => (

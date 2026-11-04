@@ -49,9 +49,7 @@ function App() {
   }
 
   const handleLogin = () =>{
-    return(
-      console.log('srodek')
-    )
+    
   }
 
 
@@ -77,8 +75,8 @@ function App() {
 
          <div className="admin-container">
           <p>User</p>
-          <input type="text" placeholder="login"/>
-          <input type="text" placeholder="hasło" />
+          <input type="text" placeholder="login" onChange={ (e) =>setLogin(e.target.value)}/>
+          <input type="text" placeholder="hasło" onChange={ (e) =>setLoginPass(e.target.value)}/>
           <Link to='user' onClick={handleLogin}>Login</Link>
           
         </div>
