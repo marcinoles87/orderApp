@@ -4,6 +4,7 @@ function Users({login,stany,setStany,setKoszyk}) {
 
   if(login ==='MARK4'){
     stany.slice(0,5)
+    console.log(stany)
   }
   
     const thStyle = {

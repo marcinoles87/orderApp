@@ -50,8 +50,9 @@ function App() {
 
   const handleLogin = () =>{
 
-    if(login ==='MARK4STYLE'){
+    if(login ==='M4'){
       console.log('m4')
+      setStany(stany.filter( item => item.GRUPA ==='3H' || item.GRUPA ==='1G' ))
 
       document.querySelector('#inputLogin').value = ''
     }
