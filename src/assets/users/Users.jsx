@@ -41,12 +41,39 @@ function Users({login,stany,setStany,setKoszyk}) {
    
      
     return (
+      <div className='users-container'>
+
+        
+        <div>
+          <h2>Witam {login}</h2>
+        </div>
+
+      <div className='users-dashbord'>
+
+        <div className='dashbord-zamowienia'>
+          <p>Zamowienia</p>
+          <p>Ilosc zamowien 134</p>
+        </div>
+
+        <div className='dashbord-zamowienia'>
+          <p>Wartość zakupów</p>
+          <p>2356 zł</p>
+        </div>
+
+        <div className='dashbord-zamowienia'>
+          <p>Kupione pozycje</p>
+          <p>345</p>
+        </div>
+
+        <div className='dashbord-zamowienia'>
+          <p>Do zapłaty</p>
+          <p>2466 zł</p>
+        </div>
+
+      </div>
       <div className='stany-container'>
           <div className='stany-datas'>
-              <h1>Witamy {login} </h1>
-  
-  
-                              
+                                  
      <table style={{ width: "100%", borderCollapse: "collapse" }}>
         <thead style={{textAlign:'center'}}>
           <tr>
@@ -81,6 +108,7 @@ function Users({login,stany,setStany,setKoszyk}) {
                               
           </div>
   
+      </div>
       </div>
     )
   }

@@ -189,6 +189,34 @@
   background-color: var(--inputBackgroundL)
 }
 
+/*users dashbord*/
+
+.users-container{
+  background-color: #222f40;
+  color:white;
+}
+
+.users-dashbord{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.dashbord-zamowienia{
+  width: 40%;
+  background-color: #2e4057;
+  border: white;
+  border-radius: 10px;
+}
+
+.dashbord-zamowienia p:nth-child(0){
+  font-size: small;
+}
+
 /*zmiana widocznosci*/
 
 .visible{
