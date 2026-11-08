@@ -208,12 +208,17 @@
 
 .dashbord-zamowienia{
   width: 40%;
+  margin: 10px;
+  padding: 10px;
   background-color: #2e4057;
   border: white;
   border-radius: 10px;
+  text-align: left;
+  
 }
 
-.dashbord-zamowienia p:nth-child(0){
+.dashbord-zamowienia p:nth-child(1){
+  color: #617896;
   font-size: small;
 }
 
