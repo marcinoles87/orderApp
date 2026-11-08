@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import {  BrowserRouter,  Link,  Route, Routes } from "react-router-dom"
 import '../src/App.css'
 
@@ -19,6 +19,13 @@ function App() {
   const [koszyk,setKoszyk] = useState([])
   const [stany,setStany] = useState([])
   const [filtered,setFiltered] = useState([])
+
+  
+   useEffect(() => {
+        fetch('http://localhost:8081')
+            .then(res => res.json())
+            .then(data => console.log(data))
+    }, [])
  
   const handleUploadFile = (e) =>{
 
