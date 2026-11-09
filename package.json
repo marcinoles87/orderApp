@@ -2,13 +2,13 @@
   "name": "react",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "nodemon backend.jsx"
+    "start": "nodemon backend"
   },
   "dependencies": {
     "cors": "^2.8.6",
