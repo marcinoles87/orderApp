@@ -1,6 +1,7 @@
 import { useState,useEffect } from "react"
 import {  BrowserRouter,  Link,  Route, Routes } from "react-router-dom"
 import '../src/App.css'
+import axios from "axios"
 
 import Zamowienie from "./assets/components/Zamowienie"
 import Koszyk from "./assets/components/Koszyk"
@@ -21,11 +22,16 @@ function App() {
   const [filtered,setFiltered] = useState([])
 
   
-   useEffect(() => {
-        fetch('http://localhost:8081')
-            .then(res => res.json())
-            .then(data => console.log(data))
-    }, [])
+   useEffect( () => {
+    axios.get('http://localhost:8080')
+    
+    .then( res => {
+      setData(res.data)
+    } )
+    
+    
+    .catch( err => console.log(err))
+  },[])
  
   const handleUploadFile = (e) =>{
 

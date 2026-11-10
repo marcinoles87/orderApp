@@ -19,6 +19,16 @@ const db = mysql.createConnection({
 
 console.log(db)
 
+app.get('/' , (req , res) => {
+    
+    const sql = "SELECT * from wydarzenia"
+    db.query(sql , ( err , data) => {
+        if(err) return res.json(err);
+        return res.json(data)
+
+    })
+})
+
 
 app.listen(Port, () => {
     console.log('listening')
