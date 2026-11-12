@@ -7,6 +7,7 @@ import Zamowienie from "./assets/components/Zamowienie"
 import Koszyk from "./assets/components/Koszyk"
 import Main from "./assets/components/Main"
 import Users from "./assets/users/Users"
+import Admin from "./assets/components/Admin"
 
 
 function App() {
@@ -20,18 +21,21 @@ function App() {
   const [koszyk,setKoszyk] = useState([])
   const [stany,setStany] = useState([])
   const [filtered,setFiltered] = useState([])
+  const [zamowienia,setZamowienia] = useState([])
 
   
    useEffect( () => {
     axios.get('http://localhost:8080')
     
     .then( res => {
-      setData(res.data)
+      console.log(res.data)
+      setZamowienia(res.data)
     } )
     
     
     .catch( err => console.log(err))
   },[])
+
  
   const handleUploadFile = (e) =>{
 
@@ -112,6 +116,7 @@ function App() {
           <Route path="*" element={<Main text={text} setKoszyk={setKoszyk} stany={stany} setStany={setStany} filtered={filtered} setFiltered={setFiltered}></Main>} ></Route>
           <Route path="zamowienie" element={<Zamowienie koszyk={koszyk}></Zamowienie>}></Route>
           <Route path="user" element={<Users login={login} stany={stany} setStany={setStany} setKoszyk={setKoszyk}></Users>}></Route>
+          <Route path="admin" element={<Admin zamowienia={zamowienia}></Admin>}/>
         </Routes>
       </div>
        

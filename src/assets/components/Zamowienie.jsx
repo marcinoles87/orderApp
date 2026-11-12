@@ -2,6 +2,10 @@
 
 function Zamowienie({koszyk}) {
 
+  const handleZamawiam = () =>{
+    
+  }
+
   const thStyle = {
   borderBottom: "2px solid #ccc",
   padding: "8px",
@@ -51,7 +55,7 @@ function getColor(stock) {
       </tbody>
     </table>
 
-    <button>Zamawiam</button>
+    <button onClick={handleZamawiam}>Zamawiam</button>
   
 
 
