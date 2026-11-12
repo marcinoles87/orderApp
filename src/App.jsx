@@ -57,7 +57,7 @@ function App() {
   }
 
   const handleAdminLogin = () =>{
-    if(admin==='m500' &adminHaslo==='m500pass' ){
+    if(admin==='m500' & adminHaslo==='m500pass' ){
       alert('dane poprawne moze dodac stany')
       document.querySelector('.stany-plik-container').classList.add('visible')
     }else{
@@ -92,7 +92,7 @@ function App() {
           <p>Admin</p>
           <input onChange={(e) =>setAdmin(e.target.value)} type="text" placeholder="login"/>
           <input onChange={(e) =>setAdminHaslo(e.target.value)} type="text" placeholder="hasło" />
-          <button onClick={handleAdminLogin}>Login</button>
+          <Link to='admin' onClick={handleAdminLogin}>Login</Link>
           
         </div>
 
