@@ -16,7 +16,7 @@ function App() {
   const [admin,setAdmin] = useState('')
   const [adminHaslo,setAdminHaslo] = useState('')
   const [login,setLogin] = useState('')
-  const [loginPass,setLoginPass] = useState('')
+  const [loginPass,setLoginPass] = useState(false)
   const [text,setText] = useState('')
   const [koszyk,setKoszyk] = useState([])
   const [stany,setStany] = useState([])
@@ -60,6 +60,7 @@ function App() {
     if(admin==='m500' & adminHaslo==='m500pass' ){
       alert('dane poprawne moze dodac stany')
       document.querySelector('.stany-plik-container').classList.add('visible')
+      setLoginPass(true)
     }else{
       alert('zle dane')
     }
@@ -92,7 +93,7 @@ function App() {
           <p>Admin</p>
           <input onChange={(e) =>setAdmin(e.target.value)} type="text" placeholder="login"/>
           <input onChange={(e) =>setAdminHaslo(e.target.value)} type="text" placeholder="hasło" />
-          <Link to='admin' onClick={handleAdminLogin}>Login</Link>
+          <Link to={loginPass ? 'admin' : '/'} onClick={handleAdminLogin}>Login</Link>
           
         </div>
 
