@@ -1,5 +1,5 @@
 
-
+import axios from "axios";
 function Zamowienie({koszyk}) {
 
   const handleZamawiam = () =>{
@@ -9,13 +9,9 @@ function Zamowienie({koszyk}) {
 
       
     {
-      DataSprzedazy : '',
       Nazwa :koszyk.NAZWA ,
-      Data : 'dzis' ,
       Opis : koszyk.GRUPA ,
-      Nip : '' ,
       Adres : koszyk.INDEKS ,
-      Cena : '' ,
     })
     .then( () => {
       console.log('success add item do database')
