@@ -4,6 +4,22 @@ function Zamowienie({koszyk}) {
 
   const handleZamawiam = () =>{
     
+
+    axios.post('http://localhost:8080/' , 
+
+      
+    {
+      DataSprzedazy : '',
+      Nazwa :koszyk.NAZWA ,
+      Data : 'dzis' ,
+      Opis : koszyk.GRUPA ,
+      Nip : '' ,
+      Adres : koszyk.INDEKS ,
+      Cena : '' ,
+    })
+    .then( () => {
+      console.log('success add item do database')
+    })
   }
 
   const thStyle = {
@@ -55,7 +71,7 @@ function getColor(stock) {
       </tbody>
     </table>
 
-    <button onClick={handleZamawiam}>Zamawiam</button>
+    <button onClick={handleZamawiam()}>Zamawiam</button>
   
 
 

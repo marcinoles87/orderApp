@@ -29,6 +29,27 @@ app.get('/' , (req , res) => {
     })
 })
 
+app.post('/',(req , res) => {
+    const sql = "INSERT INTO wydarzenia (Nazwa , Data , Opis , Adres , Nip ,Cena ) VALUES (?, ? , ? , ? , ? , ?)"
+    const Nazwa = req.body.Nazwa;
+    const Data = req.body.Data;
+    const Opis = req.body.Opis;
+    const Adres = req.body.Adres;
+    const Nip = req.body.Nip;
+    const Cena = req.body.Cena;
+
+    db.query(sql,[Nazwa,Data,Opis,Adres,Nip,Cena],
+        (err,response) =>{
+            console.log(response)
+            if(err){
+                console.log(err)
+            }else{
+                res.send('dodano dane')
+            }
+        }
+    )
+})
+
 
 
 
