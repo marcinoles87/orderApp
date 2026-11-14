@@ -30,15 +30,14 @@ app.get('/' , (req , res) => {
 })
 
 app.post('/',(req , res) => {
-    const sql = "INSERT INTO wydarzenia (Nazwa , Data , Opis , Adres , Nip ,Cena ) VALUES (?, ? , ? , ? , ? , ?)"
+    const sql = "INSERT INTO wydarzenia ( Klient,Email,Nazwa,Kod) VALUES (?, ? , ? , ?)"
+    const Klient = req.body.Klient
+    const Email = req.body.Email;
     const Nazwa = req.body.Nazwa;
-    const Data = req.body.Data;
-    const Opis = req.body.Opis;
-    const Adres = req.body.Adres;
-    const Nip = req.body.Nip;
-    const Cena = req.body.Cena;
+    const Kod = req.body.Kod;
+    
 
-    db.query(sql,[Nazwa,Data,Opis,Adres,Nip,Cena],
+    db.query(sql,[Klient,Email,Nazwa,Kod],
         (err,response) =>{
             console.log(response)
             if(err){

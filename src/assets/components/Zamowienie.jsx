@@ -9,9 +9,10 @@ function Zamowienie({koszyk}) {
 
       
     {
+      Kliient :klient,
+      Email: email,
       Nazwa :koszyk.NAZWA ,
-      Opis : koszyk.GRUPA ,
-      Adres : koszyk.INDEKS ,
+      Kod : koszyk.INDEKS ,
     })
     .then( () => {
       console.log('success add item do database')
