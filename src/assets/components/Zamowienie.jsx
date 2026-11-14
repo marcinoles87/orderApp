@@ -11,13 +11,20 @@ function Zamowienie({koszyk}) {
 
       
     {
-      Kliient :"Admin",
+      Klient :"Admin",
       Email: "Admin",
-      Nazwa :koszyk.NAZWA ,
-      Kod : koszyk.INDEKS ,
+      Zamowienie:
+      {
+        Data:'data zamowienia',
+        Nazwa : koszyk[0].NAZWA,
+        Kod:koszyk[0].INDEKS
+
+      },
+     
     })
     .then( () => {
       console.log('success add item do database')
+      alert('Wysłano zamowienie')
     })
   }
 

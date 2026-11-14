@@ -5,11 +5,14 @@ function Admin({zamowienia}) {
     <div>Admin
     {zamowienia.map( (item,index) =>{
         return(
-            <div key={index}>
-                <p>{item.Klient}</p>
-                <p>{item.Email}</p>
-                <p>{item.Nazwa}</p>
-                <p>{item.Kod}</p>
+            <div className='admin-container' key={index}>
+              <div className='admin-items'>
+                          <p>Klient : {item.Klient}</p>
+                          <p>Email : {item.Email}</p>
+                          <p>Produkt : {item.Nazwa}</p>
+                          <p>Kod : {item.Kod}</p>
+              </div>
+              
             </div>
 
         )
