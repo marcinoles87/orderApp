@@ -2,6 +2,8 @@
 import axios from "axios";
 function Zamowienie({koszyk}) {
 
+  console.log(koszyk)
+
   const handleZamawiam = () =>{
     
 
@@ -9,8 +11,8 @@ function Zamowienie({koszyk}) {
 
       
     {
-      Kliient :klient,
-      Email: email,
+      Kliient :"Admin",
+      Email: "Admin",
       Nazwa :koszyk.NAZWA ,
       Kod : koszyk.INDEKS ,
     })

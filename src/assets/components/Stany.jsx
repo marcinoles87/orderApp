@@ -64,37 +64,38 @@ const tdStyle = {
           <th style={thStyle}>Grupa</th>
           <th style={thStyle}>SKU</th>
           <th style={thStyle}>Produkt</th>
-          <th style={thStyle}>Ilosc</th>
           <th style={thStyle}>Stan magazynu</th>
         </tr>
       </thead>
 
       <tbody>
         {stanyPoprawne ? 
-        stany.map((item) => (
-          <tr key={item.sku} style={{textAlign :'center'}}>
+        stany.map((item,index) => (
+          <tr key={index} style={{textAlign :'center'}}>
             <td style={tdStyle}>{item.GRUPA}</td>
             <td style={tdStyle}>{item.INDEKS}</td>
             <td style={tdStyle}>{item.NAZWA}</td>
             <td style={{ ...tdStyle, color: getColor(item.STAN_KIL) }}>
               {Math.trunc(item.STAN_KIL)}
+
+                            <button className='buttonAddItem' onClick={ () =>addItem(item)}>+</button>
+
             </td>
-              <button className='buttonAddItem' onClick={ () =>addItem(item)}>Dodaj</button>
 
             
           </tr>
           
         ))
 
-        :  filtered.map((item) => (
-          <tr key={item.sku} style={{textAlign :'center'}}>
+        :  filtered.map((item,index) => (
+          <tr key={index} style={{textAlign :'center'}}>
             <td style={tdStyle}>{item.GRUPA}</td>
             <td style={tdStyle}>{item.INDEKS}</td>
             <td style={tdStyle}>{item.NAZWA}</td>
             <td style={{ ...tdStyle, color: getColor(item.STAN_KIL) }}>
               {Math.trunc(item.STAN_KIL)}
             </td>
-            <button className='buttonAddItem' onClick={ () =>addItem(item)}>Dodaj</button>
+            <button className='buttonAddItem' onClick={ () =>addItem(item)}>+</button>
           </tr>
         ))
       }

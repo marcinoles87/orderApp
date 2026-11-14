@@ -30,7 +30,7 @@ app.get('/' , (req , res) => {
 })
 
 app.post('/',(req , res) => {
-    const sql = "INSERT INTO wydarzenia ( Klient,Email,Nazwa,Kod) VALUES (?, ? , ? , ?)"
+    const sql = "INSERT INTO wydarzenia (Klient,Email,Nazwa,Kod) VALUES (?, ? , ? , ?)"
     const Klient = req.body.Klient
     const Email = req.body.Email;
     const Nazwa = req.body.Nazwa;

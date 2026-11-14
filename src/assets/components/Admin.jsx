@@ -6,7 +6,8 @@ function Admin({zamowienia}) {
     {zamowienia.map( (item,index) =>{
         return(
             <div key={index}>
-                <p>{item.Filia}</p>
+                <p>{item.Klient}</p>
+                <p>{item.Email}</p>
                 <p>{item.Nazwa}</p>
                 <p>{item.Kod}</p>
             </div>
