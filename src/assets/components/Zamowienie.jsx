@@ -11,10 +11,11 @@ function Zamowienie({koszyk}) {
 
       
     {
+      NrZam: new Date().getDate(),
       Klient :"Admin",
       Email: "Admin",
       Nazwa:koszyk[0].NAZWA,
-      Kod:koszyk[0].INDEKS
+      Kod:koszyk[0].INDEKS,
      
     })
     .then( () => {

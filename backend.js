@@ -32,14 +32,17 @@ app.get('/' , (req , res) => {
 
 app.post('/',(req , res) => {
 
-
-    const sql2 = `CREATE TABLE ElementyZamowienia7 (id_elementu INT PRIMARY KEY AUTO_INCREMENT, id_zamowienia INT NOT NULL,grupa VARCHAR(50) NOT NULL,indeks VARCHAR(50) NOT NULL,nazwa VARCHAR(200) NOT NULL,ilosc VARCHAR(200) NOT NULL)`
-
-    const sql = "INSERT INTO ElementyZamowienia (id_elementu,id_zamowienia,grupa,indeks,nazwa,ilosc) VALUES (?,?,?,?,?,?)"
+    const NrZam = req.body.NrZam
     const Klient = req.body.Klient
     const Email = req.body.Email;
     const Nazwa = req.body.Nazwa;
     const Kod = req.body.Kod;
+
+
+    const sql2 = `CREATE TABLE ${NrZam} (id_elementu INT PRIMARY KEY AUTO_INCREMENT, id_zamowienia INT NOT NULL,grupa VARCHAR(50) NOT NULL,indeks VARCHAR(50) NOT NULL,nazwa VARCHAR(200) NOT NULL,ilosc VARCHAR(200) NOT NULL)`
+
+    const sql = `INSERT INTO ElementyZamowienia${NrZam} (id_elementu,id_zamowienia,grupa,indeks,nazwa,ilosc) VALUES (?,?,?,?,?,?)`
+  
     
     db.query(sql2)
 
