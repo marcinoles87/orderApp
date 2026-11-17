@@ -13,8 +13,8 @@ function Zamowienie({koszyk}) {
     {
       Klient :"Admin",
       Email: "Admin",
-      Nazwa:koszyk[0].NAZWA,
-      Kod:koszyk[0].INDEKS
+      nazwa:koszyk[0].NAZWA,
+      ilosc:koszyk[0].INDEKS
      
     })
     .then( () => {
@@ -72,7 +72,7 @@ function getColor(stock) {
       </tbody>
     </table>
 
-    <button onClick={handleZamawiam()}>Zamawiam</button>
+    <button onClick={handleZamawiam}>Zamawiam</button>
   
 
 

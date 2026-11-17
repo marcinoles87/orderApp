@@ -2,6 +2,7 @@
 const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
+const { data } = require('react-router-dom');
 
 const app = express();
 
@@ -31,9 +32,11 @@ app.get('/' , (req , res) => {
 
 app.post('/',(req , res) => {
 
-    const sql2 = "CREATE TABLE ElementyZamowienia (id_elementu INT PRIMARY KEY AUTO_INCREMENT, id_zamowienia INT NOT NULL,grupa VARCHAR(50) NOT NULL,indeks VARCHAR(50) NOT NULL,nazwa VARCHAR(200) NOT NULL,ilosc INT NOT NULL CHECK (ilosc > 0))"
+    let nrZam = new Date().getDate
 
-    const sql = "INSERT INTO ElementyZamowienia (Klient,Email,Nazwa,Kod) VALUES (?, ? , ? , ?)"
+    const sql2 = `CREATE TABLE ElementyZamowienia2 (id_elementu INT PRIMARY KEY AUTO_INCREMENT, id_zamowienia INT NOT NULL,grupa VARCHAR(50) NOT NULL,indeks VARCHAR(50) NOT NULL,nazwa VARCHAR(200) NOT NULL,ilosc INT NOT NULL CHECK (ilosc > 0))`
+
+    const sql = "INSERT INTO ElementyZamowienia (,,grupa,indeks,nazwa,ilosc) VALUES (?,?,?,?,?,?)"
     const Klient = req.body.Klient
     const Email = req.body.Email;
     const Nazwa = req.body.Nazwa;
@@ -41,7 +44,7 @@ app.post('/',(req , res) => {
     
     db.query(sql2)
 
-    db.query(sql,[Klient,Email,Nazwa,Kod],
+    db.query(sql,[,,Klient,Email,Nazwa,Kod],
         (err,response) =>{
             console.log(response)
             if(err){
