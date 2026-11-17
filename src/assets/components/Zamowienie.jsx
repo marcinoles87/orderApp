@@ -13,8 +13,8 @@ function Zamowienie({koszyk}) {
     {
       Klient :"Admin",
       Email: "Admin",
-      nazwa:koszyk[0].NAZWA,
-      ilosc:koszyk[0].INDEKS
+      Nazwa:koszyk[0].NAZWA,
+      Kod:koszyk[0].INDEKS
      
     })
     .then( () => {

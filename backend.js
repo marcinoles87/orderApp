@@ -33,7 +33,7 @@ app.get('/' , (req , res) => {
 app.post('/',(req , res) => {
 
 
-    const sql2 = `CREATE TABLE ElementyZamowienia4 (id_elementu INT PRIMARY KEY AUTO_INCREMENT, id_zamowienia INT NOT NULL,grupa VARCHAR(50) NOT NULL,indeks VARCHAR(50) NOT NULL,nazwa VARCHAR(200) NOT NULL,ilosc INT NOT NULL CHECK (ilosc > 0))`
+    const sql2 = `CREATE TABLE ElementyZamowienia7 (id_elementu INT PRIMARY KEY AUTO_INCREMENT, id_zamowienia INT NOT NULL,grupa VARCHAR(50) NOT NULL,indeks VARCHAR(50) NOT NULL,nazwa VARCHAR(200) NOT NULL,ilosc VARCHAR(200) NOT NULL)`
 
     const sql = "INSERT INTO ElementyZamowienia (id_elementu,id_zamowienia,grupa,indeks,nazwa,ilosc) VALUES (?,?,?,?,?,?)"
     const Klient = req.body.Klient
