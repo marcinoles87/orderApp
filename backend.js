@@ -32,11 +32,10 @@ app.get('/' , (req , res) => {
 
 app.post('/',(req , res) => {
 
-    let nrZam = new Date().getDate
 
-    const sql2 = `CREATE TABLE ElementyZamowienia2 (id_elementu INT PRIMARY KEY AUTO_INCREMENT, id_zamowienia INT NOT NULL,grupa VARCHAR(50) NOT NULL,indeks VARCHAR(50) NOT NULL,nazwa VARCHAR(200) NOT NULL,ilosc INT NOT NULL CHECK (ilosc > 0))`
+    const sql2 = `CREATE TABLE ElementyZamowienia4 (id_elementu INT PRIMARY KEY AUTO_INCREMENT, id_zamowienia INT NOT NULL,grupa VARCHAR(50) NOT NULL,indeks VARCHAR(50) NOT NULL,nazwa VARCHAR(200) NOT NULL,ilosc INT NOT NULL CHECK (ilosc > 0))`
 
-    const sql = "INSERT INTO ElementyZamowienia (,,grupa,indeks,nazwa,ilosc) VALUES (?,?,?,?,?,?)"
+    const sql = "INSERT INTO ElementyZamowienia (id_elementu,id_zamowienia,grupa,indeks,nazwa,ilosc) VALUES (?,?,?,?,?,?)"
     const Klient = req.body.Klient
     const Email = req.body.Email;
     const Nazwa = req.body.Nazwa;
@@ -44,7 +43,7 @@ app.post('/',(req , res) => {
     
     db.query(sql2)
 
-    db.query(sql,[,,Klient,Email,Nazwa,Kod],
+    db.query(sql,['test','test',Klient,Email,Nazwa,Kod],
         (err,response) =>{
             console.log(response)
             if(err){
