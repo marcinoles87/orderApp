@@ -16,6 +16,7 @@ function Zamowienie({koszyk}) {
       Email: "Admin",
       Nazwa:koszyk[0].NAZWA,
       Kod:koszyk[0].INDEKS,
+      Tablica:koszyk
      
     })
     .then( () => {
