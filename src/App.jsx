@@ -111,11 +111,11 @@ function App() {
       <div className="panel-right-container">
               {/* <h1>Platforma do tworzenia zamówień</h1> */}
 
-        <Koszyk koszyk={koszyk}></Koszyk>
+        <Koszyk koszyk={koszyk} ></Koszyk>
 
         <Routes>
           <Route path="*" element={<Main text={text} setKoszyk={setKoszyk} stany={stany} setStany={setStany} filtered={filtered} setFiltered={setFiltered}></Main>} ></Route>
-          <Route path="zamowienie" element={<Zamowienie koszyk={koszyk}></Zamowienie>}></Route>
+          <Route path="zamowienie" element={<Zamowienie koszyk={koszyk} login={login}></Zamowienie>}></Route>
           <Route path="user" element={<Users login={login} stany={stany} setStany={setStany} setKoszyk={setKoszyk}></Users>}></Route>
           <Route path="admin" element={<Admin zamowienia={zamowienia}></Admin>}/>
         </Routes>

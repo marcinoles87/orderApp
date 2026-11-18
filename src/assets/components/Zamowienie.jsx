@@ -1,6 +1,6 @@
 
 import axios from "axios";
-function Zamowienie({koszyk}) {
+function Zamowienie({koszyk,login}) {
 
   console.log(koszyk)
 
@@ -11,8 +11,8 @@ function Zamowienie({koszyk}) {
 
       
     {
-      NrZam: new Date().getDate(),
-      Klient :"Admin",
+      
+      Klient :login,
       Email: "Admin",
       Nazwa:koszyk[0].NAZWA,
       Kod:koszyk[0].INDEKS,

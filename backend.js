@@ -34,21 +34,20 @@ app.post('/',(req , res) => {
 
     const Tablica = req.body.Tablica
     const json = JSON.stringify(Tablica)
-    const NrZam = req.body.NrZam
     const Klient = req.body.Klient
     const Email = req.body.Email;
     const Nazwa = req.body.Nazwa;
     const Kod = req.body.Kod;
 
 
-    const sql2 = `CREATE TABLE test2 (id_elementu INT PRIMARY KEY AUTO_INCREMENT, id_zamowienia INT NOT NULL,grupa VARCHAR(50) NOT NULL,indeks VARCHAR(50) NOT NULL,nazwa VARCHAR(200) NOT NULL,ilosc VARCHAR(200) NOT NULL,tablica NOT NULL)`
+    const sql2 = `CREATE TABLE test5 (id_elementu INT PRIMARY KEY AUTO_INCREMENT, Klient VARCHAR(200) NOT NULL,tablica VARCHAR(200))`
 
-    const sql = `INSERT INTO test2 (id_elementu,id_zamowienia,grupa,indeks,nazwa,ilosc,tablica) VALUES (?,?,?,?,?,?,?)`
+    const sql = `INSERT INTO test5 (id_elementu,Klient,tablica) VALUES (?,?,?)`
   
     
     db.query(sql2)
 
-    db.query(sql,['test','test',Klient,Email,Nazwa,Kod,[json]],
+    db.query(sql,['test',Klient,[json]],
         (err,response) =>{
             console.log(response)
             if(err){
