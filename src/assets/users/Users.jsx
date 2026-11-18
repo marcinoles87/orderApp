@@ -1,6 +1,8 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import axios from 'axios'
 function Users({login,stany,setStany,setKoszyk}) {
+
+  const [zamowieniaKlienta,setZamowieniaKlienta] = useState([])
 
   if(login ==='MARK4'){
     stany.slice(0,5)
@@ -35,6 +37,19 @@ function Users({login,stany,setStany,setKoszyk}) {
     koszyk.classList.toggle('resize')
     setKoszyk( prev => [...prev,item])
  }
+
+ const showOrders = () =>{
+
+      axios.get('http://localhost:8080/orders')
+    
+    .then( res => {
+      console.log(res.data)
+      setZamowieniaKlienta(res.data)
+      console.log(zamowieniaKlienta)
+    } )
+    
+
+ }
    
   
   
@@ -49,6 +64,7 @@ function Users({login,stany,setStany,setKoszyk}) {
         </div>
 
       <div className='users-dashbord'>
+
 
         <div className='dashbord-zamowienia'>
           <p>Zamowienia</p>
@@ -69,6 +85,20 @@ function Users({login,stany,setStany,setKoszyk}) {
           <p>Do zapłaty</p>
           <p>2466 zł</p>
         </div>
+
+        <button onClick={showOrders}>Pokaz zamowienia</button>
+
+        <div className='zamowienia-klienta'>
+          {zamowieniaKlienta.map( (item,index) =>{
+            return(
+              <div className='zamowienie' key={index}>
+                <p>{item.Klient}</p>
+                <p>{item.tablica}</p>
+                </div>
+            )
+          })}
+        </div>
+
 
       </div>
       <div className='stany-container'>

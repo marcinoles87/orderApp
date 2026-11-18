@@ -30,6 +30,15 @@ app.get('/' , (req , res) => {
     })
 })
 
+app.get('orders' , (req ,res) =>{
+
+    const sql = "SELECT * from test5"
+      db.query(sql , ( err , data) => {
+        if(err) return res.json(err);
+        return res.json(data)
+    })
+})
+
 app.post('/',(req , res) => {
 
     const Tablica = req.body.Tablica
