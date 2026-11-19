@@ -40,7 +40,7 @@ function Users({login,stany,setStany,setKoszyk}) {
 
  const showOrders = () =>{
 
-      axios.get('http://localhost:8080/orders/')
+      axios.get('http://localhost:8080')
     
     .then( res => {
       console.log(res.data)
@@ -93,7 +93,9 @@ function Users({login,stany,setStany,setKoszyk}) {
             return(
               <div className='zamowienie' key={index}>
                 <p>{item.Klient}</p>
+                <p>{item.id_elementu}</p>
                 <p>{item.tablica}</p>
+               
                 </div>
             )
           })}

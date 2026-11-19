@@ -22,7 +22,7 @@ console.log(db)
 
 app.get('/' , (req , res) => {
     
-    const sql = "SELECT * from wydarzenia"
+    const sql = "SELECT * from order1"
     db.query(sql , ( err , data) => {
         if(err) return res.json(err);
         return res.json(data)
@@ -30,7 +30,7 @@ app.get('/' , (req , res) => {
     })
 })
 
-app.get('orders' , (req ,res) =>{
+app.get('/' , (req ,res) =>{
 
     const sql = "SELECT * from test5"
       db.query(sql , ( err , data) => {
@@ -39,7 +39,7 @@ app.get('orders' , (req ,res) =>{
     })
 })
 
-app.post('/orders/',(req , res) => {
+app.post('/',(req , res) => {
 
     const Tablica = req.body.Tablica
     const json = JSON.stringify(Tablica)
@@ -49,12 +49,12 @@ app.post('/orders/',(req , res) => {
     const Kod = req.body.Kod;
 
 
-    const sql2 = `CREATE TABLE order1 (id_elementu INT PRIMARY KEY AUTO_INCREMENT, Klient VARCHAR(200) NOT NULL,tablica VARCHAR(200))`
+    // const sql2 = `CREATE TABLE order2 (id_elementu INT PRIMARY KEY AUTO_INCREMENT, Klient VARCHAR(200) NOT NULL,tablica VARCHAR(200))`
 
     const sql = `INSERT INTO order1 (id_elementu,Klient,tablica) VALUES (?,?,?)`
   
     
-    db.query(sql2)
+    // db.query(sql2)
 
     db.query(sql,['test',Klient,[json]],
         (err,response) =>{
