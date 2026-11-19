@@ -40,7 +40,7 @@ function Users({login,stany,setStany,setKoszyk}) {
 
  const showOrders = () =>{
 
-      axios.get('http://localhost:8080')
+      axios.get('http://localhost:8080/orders/')
     
     .then( res => {
       console.log(res.data)
