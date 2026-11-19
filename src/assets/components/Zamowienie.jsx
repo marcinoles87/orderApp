@@ -7,7 +7,7 @@ function Zamowienie({koszyk,login}) {
   const handleZamawiam = () =>{
     
 
-    axios.post('http://localhost:8080/' , 
+    axios.post('http://localhost:8080/orders/' , 
 
       
     {

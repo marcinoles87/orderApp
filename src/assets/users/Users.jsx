@@ -40,7 +40,7 @@ function Users({login,stany,setStany,setKoszyk}) {
 
  const showOrders = () =>{
 
-      axios.get('http://localhost:8080/orders')
+      axios.get('http://localhost:8080')
     
     .then( res => {
       console.log(res.data)
@@ -117,8 +117,8 @@ function Users({login,stany,setStany,setKoszyk}) {
   
         <tbody>
           
-          {stany.map((item) => (
-            <tr key={item.sku} style={{textAlign :'center'}}>
+          {stany.map((item,index) => (
+            <tr key={index} style={{textAlign :'center'}}>
               <td style={tdStyle}>{item.GRUPA}</td>
               <td style={tdStyle}>{item.INDEKS}</td>
               <td style={tdStyle}>{item.NAZWA}</td>
