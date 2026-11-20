@@ -40,16 +40,28 @@ function Users({login,stany,setStany,setKoszyk}) {
 
  const showOrders = () =>{
 
-      axios.get('http://localhost:8080')
+  if(login==='m4'){
+
+      axios.get('http://localhost:8080/m4')
     
     .then( res => {
       console.log(res.data)
       setZamowieniaKlienta(res.data)
       console.log(zamowieniaKlienta)
     } )
+  }else{
+
+    axios.get('http://localhost:8080')
+    
+    .then( res => {
+      console.log(res.data)
+      setZamowieniaKlienta(res.data)
+      console.log(zamowieniaKlienta)
+
+  })
     
 
- }
+ }}
    
   
   

@@ -22,7 +22,7 @@ console.log(db)
 
 app.get('/' , (req , res) => {
     
-    const sql = "SELECT * from order1"
+    const sql = "SELECT * from test2"
     db.query(sql , ( err , data) => {
         if(err) return res.json(err);
         return res.json(data)
@@ -30,9 +30,9 @@ app.get('/' , (req , res) => {
     })
 })
 
-app.get('/' , (req ,res) =>{
+app.get('mark4' , (req ,res) =>{
 
-    const sql = "SELECT * from test5"
+    const sql = "SELECT * from order1"
       db.query(sql , ( err , data) => {
         if(err) return res.json(err);
         return res.json(data)
@@ -48,6 +48,7 @@ app.post('/',(req , res) => {
     const Nazwa = req.body.Nazwa;
     const Kod = req.body.Kod;
 
+    const zam = req.body.Tablica.map( (item) =>[item.GRUPA])
 
     // const sql2 = `CREATE TABLE order2 (id_elementu INT PRIMARY KEY AUTO_INCREMENT, Klient VARCHAR(200) NOT NULL,tablica VARCHAR(200))`
 
@@ -56,7 +57,7 @@ app.post('/',(req , res) => {
     
     // db.query(sql2)
 
-    db.query(sql,['test',Klient,[json]],
+    db.query(sql,['test',Klient,[zam]],
         (err,response) =>{
             console.log(response)
             if(err){
