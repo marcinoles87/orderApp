@@ -48,7 +48,7 @@ app.post('/',(req , res) => {
     const Nazwa = req.body.Nazwa;
     const Kod = req.body.Kod;
 
-    const zam = req.body.Tablica.map( (item) =>[item.GRUPA])
+    const zam = req.body.Tablica.map( (item) =>[item.NAZWA])
 
     // const sql2 = `CREATE TABLE order2 (id_elementu INT PRIMARY KEY AUTO_INCREMENT, Klient VARCHAR(200) NOT NULL,tablica VARCHAR(200))`
 
