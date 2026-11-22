@@ -18,7 +18,6 @@ const db = mysql.createConnection({
     database : "v55582726_viptour"
 })
 
-console.log(db)
 
 app.get('/' , (req , res) => {
     
@@ -30,7 +29,7 @@ app.get('/' , (req , res) => {
     })
 })
 
-app.get('mark4' , (req ,res) =>{
+app.get(':login' , (req ,res) =>{
 
     const sql = "SELECT * from order1"
       db.query(sql , ( err , data) => {
@@ -57,7 +56,7 @@ app.post('/',(req , res) => {
     
     // db.query(sql2)
 
-    db.query(sql,['test',Klient,[zam]],
+    db.query(sql,['test',Klient,[json]],
         (err,response) =>{
             console.log(response)
             if(err){

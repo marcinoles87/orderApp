@@ -4,6 +4,8 @@ function Users({login,stany,setStany,setKoszyk}) {
 
   const [zamowieniaKlienta,setZamowieniaKlienta] = useState([])
 
+  console.log(login)
+
   if(login ==='MARK4'){
     stany.slice(0,5)
     console.log(stany)
@@ -40,9 +42,9 @@ function Users({login,stany,setStany,setKoszyk}) {
 
  const showOrders = () =>{
 
-  if(login==='m4'){
+  if(login){
 
-      axios.get('http://localhost:8080/m4')
+      axios.get(`http://localhost:8080/${login}`)
     
     .then( res => {
       console.log(res.data)
