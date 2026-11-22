@@ -226,8 +226,17 @@
 
 }
 
+.users-dashbord button{
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  background-color:rgb(35, 163, 168);
+  color:white;
+  cursor: pointer;
+}
+
 .dashbord-zamowienia{
-  width: 40%;
+  width: 47%;
   margin: 10px;
   padding: 10px;
   background-color: #2e4057;

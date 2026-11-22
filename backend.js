@@ -18,20 +18,21 @@ const db = mysql.createConnection({
     database : "v55582726_viptour"
 })
 
+console.log(db)
 
-// app.get('/' , (req , res) => {
+app.get('/' , (req , res) => {
     
-//     const sql = "SELECT * from test2"
-//     db.query(sql , ( err , data) => {
-//         if(err) return res.json(err);
-//         return res.json(data)
+    const sql = "SELECT * from test2"
+    db.query(sql , ( err , data) => {
+        if(err) return res.json(err);
+        return res.json(data)
 
-//     })
-// })
+    })
+})
 
 
 
-app.get(':login' , (req ,res) =>{
+app.get('/:login' , (req ,res) =>{
 
     const log = req.params
     console.log(log)

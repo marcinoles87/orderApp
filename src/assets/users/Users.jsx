@@ -82,22 +82,22 @@ function Users({login,stany,setStany,setKoszyk}) {
 
         <div className='dashbord-zamowienia'>
           <p>Zamowienia</p>
-          <p>Ilosc zamowien 134</p>
+          <p>Ilosc zamowien {zamowieniaKlienta.length}</p>
         </div>
 
         <div className='dashbord-zamowienia'>
           <p>Wartość zakupów</p>
-          <p>2356 zł</p>
+          <p>--- zł</p>
         </div>
 
         <div className='dashbord-zamowienia'>
           <p>Kupione pozycje</p>
-          <p>345</p>
+          <p>{zamowieniaKlienta.length}</p>
         </div>
 
         <div className='dashbord-zamowienia'>
           <p>Do zapłaty</p>
-          <p>2466 zł</p>
+          <p>--- zł</p>
         </div>
 
         <button onClick={showOrders}>Pokaz zamowienia</button>
