@@ -74,7 +74,7 @@ function Users({login,stany,setStany,setKoszyk}) {
 
         
         <div>
-          <h2>Witam {login}</h2>
+          <h2 style={{color:'white'}}>Witamy {login}</h2>
         </div>
 
       <div className='users-dashbord'>
