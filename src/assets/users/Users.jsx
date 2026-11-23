@@ -1,21 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 function Users({login,stany,setStany,setKoszyk}) {
 
   const [zamowieniaKlienta,setZamowieniaKlienta] = useState([])
 
-  console.log(login)
-
-  if(login ==='MARK4'){
-    stany.slice(0,5)
-    console.log(stany)
-  }
+  useEffect( () =>{
+    console.log('wykonano')
+  },[])
   
     const thStyle = {
     borderBottom: "2px solid #ccc",
     padding: "8px",
     textAlign: "left",
-    background: "#08252d",
+    background:" rgb(35, 163, 168)",
   };
   
   const tdStyle = {
