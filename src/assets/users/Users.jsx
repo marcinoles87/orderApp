@@ -15,7 +15,7 @@ function Users({login,stany,setStany,setKoszyk}) {
     borderBottom: "2px solid #ccc",
     padding: "8px",
     textAlign: "left",
-    background: "#f5f5f5",
+    background: "#08252d",
   };
   
   const tdStyle = {
@@ -141,7 +141,7 @@ function Users({login,stany,setStany,setKoszyk}) {
               <td style={{ ...tdStyle, color: getColor(item.STAN_KIL) }}>
                 {Math.trunc(item.STAN_KIL)}
               </td>
-                <button  className='buttonAddItem' onClick={ () =>addItem(item)}>Dodaj</button>
+                <button  className='buttonAddItem' onClick={ () =>addItem(item)}>+</button>
 
               
             </tr>
