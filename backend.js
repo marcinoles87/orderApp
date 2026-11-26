@@ -22,7 +22,7 @@ console.log(db)
 
 app.get('/' , (req , res) => {
     
-    const sql = "SELECT * from test2"
+    const sql = "SELECT * from order1"
     db.query(sql , ( err , data) => {
         if(err) return res.json(err);
         return res.json(data)

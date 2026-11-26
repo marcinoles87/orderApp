@@ -45,12 +45,14 @@ function Users({login,stany,setStany,setKoszyk}) {
     
     .then( res => {
       console.log(res.data)
+      const data = JSON.parse(res.data[0].tablica)
       setZamowieniaKlienta(res.data)
+      console.log(res.data[0].tablica)
       console.log(zamowieniaKlienta)
     } )
   }else{
 
-    axios.get('http://localhost:8080')
+    axios.get('http://localhost:8080/')
     
     .then( res => {
       console.log(res.data)
