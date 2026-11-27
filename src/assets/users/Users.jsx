@@ -39,15 +39,25 @@ function Users({login,stany,setStany,setKoszyk}) {
 
  const showOrders = () =>{
 
+  
+
   if(login){
 
       axios.get(`http://localhost:8080/${login}`)
+
+
     
     .then( res => {
-      console.log(res.data)
-      const data = JSON.parse(res.data[0].tablica)
-      setZamowieniaKlienta(res.data)
+
+      
+
       console.log(res.data[0].tablica)
+      const data =(res.data[0].tablica.slice(0,16))
+      console.log(data)
+      const newData = JSON.parse(data)
+      
+      setZamowieniaKlienta(res.data)
+      console.log(newData)
       console.log(zamowieniaKlienta)
     } )
   }else{
@@ -55,6 +65,8 @@ function Users({login,stany,setStany,setKoszyk}) {
     axios.get('http://localhost:8080/')
     
     .then( res => {
+
+      
       console.log(res.data)
       setZamowieniaKlienta(res.data)
       console.log(zamowieniaKlienta)

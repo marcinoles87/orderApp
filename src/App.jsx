@@ -28,7 +28,6 @@ function App() {
     axios.get('http://localhost:8080')
     
     .then( res => {
-      console.log(res.data)
       setZamowienia(res.data)
     } )
     
