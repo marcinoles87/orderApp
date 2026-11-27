@@ -52,12 +52,12 @@ function Users({login,stany,setStany,setKoszyk}) {
       
 
       console.log(res.data[0].tablica)
-      const data =(res.data[0].tablica.slice(0,16))
-      console.log(data)
-      const newData = JSON.parse(data)
+      let newData = res.data[0].tablica.slice(1,184)
+      console.log(newData)
+      const newData2 = JSON.parse(newData)
+      
       
       setZamowieniaKlienta(res.data)
-      console.log(newData)
       console.log(zamowieniaKlienta)
     } )
   }else{
